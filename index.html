@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Filmer l’impossible · Madh.IA</title>
+<meta content="Des films pour les technologies, les machines et les procédés qu’une caméra ne peut pas filmer. Un mix bien dosé de 3D, d’IA et de motion design, pour un film réaliste que tout le monde comprend." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Martian+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#f5f2ea;--bg2:#ece7dc;--paper:#fbf9f4;--card:#fff;--ink:#17150f;--ink2:#34302a;--mute:#676256;--mute2:#9a9487;--line:#e4ded2;--line2:#d2cab9;--acc:#f26a1f;--tint:rgba(242,106,31,.13);--hd:68px;--sh:0 1px 2px rgba(23,21,15,.05),0 14px 34px -20px rgba(23,21,15,.28);--sans:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'Martian Mono',ui-monospace,Consolas,monospace}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--hd) + 16px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:clip;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,video{display:block;max-width:100%}
+a{color:inherit} p{margin:0} figure{margin:0} button{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:800;letter-spacing:-.035em;line-height:1.08}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.skip{position:absolute;left:-9999px;top:0}.skip:focus{left:16px;top:12px;z-index:100;background:#fff;padding:10px 14px;border-radius:10px}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* Logo animé Madh.IA (repris du site) */
+.logo{font-weight:800;letter-spacing:-.03em}
+.lr{position:relative;display:inline-flex;align-items:flex-start;line-height:1.2em;white-space:nowrap}
+.lr-win{display:inline-block;height:1.2em;overflow:hidden;transition:width .5s cubic-bezier(.7,0,.2,1)}
+.lr-col{display:block;transition:transform .5s cubic-bezier(.7,0,.2,1)} .lr-col>span{display:block;width:max-content;height:1.2em}
+.lr-leg{position:absolute;left:1px;top:100%;margin-top:2px;line-height:1.3em;font-size:8.5px;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:color-mix(in srgb,currentColor 55%,transparent)}
+.lr-leg b{color:var(--acc);font-weight:800}
+
+/* En-tête collant */
+.hd{position:sticky;top:0;z-index:50;background:rgba(245,242,234,.9);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.hd.on{border-bottom-color:var(--line)}
+.hd .wrap{display:flex;align-items:center;gap:24px;height:var(--hd)}
+.hd .logo{font-size:22px;text-decoration:none;margin-top:-8px}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{font-size:14px;font-weight:600;color:var(--mute);text-decoration:none;padding:8px 11px;border-radius:999px;transition:color .2s,background .2s;white-space:nowrap}
+.nav a:hover{color:var(--ink)} .nav a.act{color:var(--ink);background:rgba(23,21,15,.065)}
+.hd-btn{flex:none} .hd-btn .sm{display:none}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 15px/1.1 var(--sans);padding:15px 22px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn-o{background:var(--acc);color:var(--ink);box-shadow:0 8px 22px -12px rgba(242,106,31,.9)}
+.btn-k{background:var(--ink);color:var(--bg)}
+.btn-l{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line2)} .btn-l:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-gl{background:transparent;color:var(--bg);box-shadow:inset 0 0 0 1.5px rgba(245,242,234,.3)} .btn-gl:hover{box-shadow:inset 0 0 0 1.5px var(--bg)}
+.btn-s{padding:11px 17px;font-size:14px}
+.btn .i{width:16px;height:16px}
+
+/* Typo commune */
+.eb{display:flex;align-items:center;gap:10px;font:500 11.5px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+.eb .n{color:var(--acc)}
+.eb .n::after{content:"";display:inline-block;width:18px;height:1px;background:currentColor;vertical-align:middle;margin-left:10px;opacity:.6}
+.lead{font-size:18px;line-height:1.55;color:var(--mute)}
+.sec{padding:112px 0;position:relative}
+.alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sh{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px 72px;align-items:end;margin-bottom:52px}
+.sh h2{font-size:clamp(31px,3.5vw,48px);margin-top:16px;max-width:17ch;text-wrap:balance}
+.obj{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--ink);margin-bottom:12px}
+.obj span{display:inline-flex;align-items:center;gap:7px;font:500 10.5px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--mute);padding:6px 9px;border:1px solid var(--line2);border-radius:999px;transform:translateY(-2px)}
+.obj span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px}
+
+/* Héros */
+.hero{padding:52px 0 84px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-areas:"t v" "m v";column-gap:60px;align-items:start}
+.h-t{grid-area:t} .h-m{grid-area:m} .hv{grid-area:v;align-self:center;margin-top:8px}
+.hero h1{font-size:clamp(38px,4.6vw,64px);letter-spacing:-.04em;line-height:1;margin:20px 0 20px;text-wrap:balance}
+.hero .lead{font-size:18px;max-width:33em}
+.proofs{margin:30px 0 30px;padding:0;border-top:1px solid var(--line2)}
+.proofs div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:18px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line2)}
+.proofs dt{font-size:25px;font-weight:800;letter-spacing:-.04em;line-height:1.1;white-space:nowrap}
+.proofs dt .ar{color:var(--acc)}
+.proofs dd{margin:0;font-size:14.5px;line-height:1.45;color:var(--mute)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.reass{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font:500 11px/1.4 var(--mono);color:var(--mute);letter-spacing:.02em}
+.reass span{display:inline-flex;align-items:center;gap:7px}
+.reass .i{width:14px;height:14px;color:var(--acc);stroke-width:2.4}
+
+/* Comparateur glissant */
+.cmp{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#0d0c0a;--p:50%;user-select:none;-webkit-user-select:none;touch-action:pan-y;cursor:ew-resize;isolation:isolate}
+.cmp.ar43{aspect-ratio:4/3}
+.cmp>img,.cmp>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cmp .cmp-b{clip-path:inset(0 0 0 var(--p))}
+.cmp-line{position:absolute;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:#fff;z-index:2;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.cmp-knob{position:absolute;top:50%;left:var(--p);z-index:3;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:var(--acc);color:var(--ink);display:grid;place-items:center;box-shadow:0 6px 22px rgba(0,0,0,.35),0 0 0 4px rgba(255,255,255,.9);transition:transform .15s}
+.cmp.drag .cmp-knob,.cmp-knob:hover{transform:scale(1.08)}
+.cmp-knob .i{width:22px;height:22px;stroke-width:2.2}
+.tag{position:absolute;top:12px;z-index:2;font:500 10.5px/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;padding:8px 10px;border-radius:999px;background:rgba(23,21,15,.78);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);pointer-events:none;white-space:nowrap}
+.tag.tl{left:12px} .tag.tr{right:12px;background:rgba(255,255,255,.9);color:var(--ink)}
+.hv .cmp{box-shadow:0 30px 60px -30px rgba(23,21,15,.55)}
+.hv-bar{display:flex;justify-content:space-between;align-items:center;gap:10px 16px;margin-top:14px;flex-wrap:wrap}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-weight:600;font-size:13px;line-height:1;padding:9px 13px;border-radius:999px;border:1px solid var(--line2);background:transparent;cursor:pointer;color:var(--mute);transition:.2s}
+.chip:hover{color:var(--ink);border-color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.hint{font:500 11px/1.3 var(--mono);color:var(--mute)}
+.l3{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line2)}
+.l3 li{padding:14px 14px 0 0;font-size:14px;line-height:1.4;color:var(--mute);counter-increment:l3}
+.l3 li::before{content:"0" counter(l3);display:block;font:500 10.5px/1 var(--mono);color:var(--acc);margin-bottom:8px}
+.l3 b{display:block;color:var(--ink);font-size:15px;letter-spacing:-.01em}
+
+/* Bandeau clients */
+.logos{padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.logos .wrap{display:flex;align-items:center;gap:40px}
+.logos p{font:500 10.5px/1.5 var(--mono);color:var(--mute);text-transform:uppercase;letter-spacing:.09em;flex:none;width:150px}
+.logos ul{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 30px;flex:1;list-style:none;margin:0;padding:0}
+.logos li{font-weight:800;font-size:18px;letter-spacing:-.025em;color:#8a8478;white-space:nowrap}
+
+/* Pour qui */
+.sit-t{overflow:hidden}
+.sit-h,.sit{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr) minmax(0,1.15fr) minmax(0,.85fr);gap:28px}
+.sit-h{font:500 10.5px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.09em;color:var(--mute);background:var(--paper);border-bottom:1px solid var(--line);padding:15px 28px}
+.sit{padding:24px 28px;align-items:start}
+.sit+.sit{border-top:1px solid var(--line)}
+.sit h3{font-size:18px;letter-spacing:-.02em;line-height:1.25;display:flex;gap:14px;align-items:flex-start}
+.ic{width:38px;height:38px;border-radius:11px;background:var(--bg);display:grid;place-items:center;flex:none;color:var(--ink)}
+.sit h3 .ic{margin-top:-8px}
+.sit p{font-size:15px;line-height:1.5;color:var(--mute)}
+.fit a{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--acc);padding-bottom:2px}
+.fit span{display:block;font-size:13.5px;margin-top:6px;color:var(--mute)}
+.fit .lk2{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:600;color:var(--ink);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line2)}
+
+/* Onglets des cas */
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:36px}
+.tab{position:relative;text-align:left;padding:20px 24px 22px;border-radius:18px;border:1px solid var(--line2);background:transparent;cursor:pointer;transition:background .2s,border-color .2s,box-shadow .2s}
+.tab:hover{border-color:var(--ink)}
+.tab .tk{display:flex;justify-content:space-between;gap:10px;font:500 10.5px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+.tab b{display:block;font-size:23px;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin:12px 0 5px}
+.tab .ts{display:block;font-size:14.5px;line-height:1.45;color:var(--mute)}
+.tab[aria-selected=true]{background:var(--card);border-color:var(--ink);box-shadow:var(--sh)}
+.tab[aria-selected=true]::after{content:"";position:absolute;left:24px;right:24px;bottom:-1px;height:3px;border-radius:3px 3px 0 0;background:var(--acc)}
+.tab[aria-selected=true] .tk span:first-child{color:var(--ink)}
+.pan:focus{outline:none}
+.ci{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:56px;align-items:start;margin-bottom:44px}
+.ci h3{font-size:clamp(25px,2.5vw,34px);margin:16px 0 16px;text-wrap:balance}
+.ci p:not(.badge){color:var(--mute);font-size:16.5px} .ci p+p{margin-top:10px}
+.badge{display:inline-flex;align-items:center;gap:8px;font:500 10.5px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;padding:8px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--ink2)}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--acc)}
+.kf{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.kf div{padding:20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kf div:nth-child(2n){border-right:0}
+.kf div:nth-last-child(-n+2){border-bottom:0}
+.kf .w{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line)!important}
+.kf b{display:block;font-size:32px;font-weight:800;letter-spacing:-.045em;line-height:1.1;margin-bottom:6px}
+.kf b.t{font-size:21px;letter-spacing:-.03em;line-height:1.2}
+.kf b .ar{color:var(--acc)}
+.kf>div>span{display:block;font-size:13.5px;line-height:1.4;color:var(--mute)}
+.track{display:grid;position:relative;margin-bottom:8px}
+.track.t6{grid-template-columns:repeat(6,1fr)} .track.t4{grid-template-columns:repeat(4,1fr)}
+.track::before{content:"";position:absolute;top:15px;height:1.5px;background:var(--line2)}
+.track.t6::before{left:8.333%;right:8.333%} .track.t4::before{left:12.5%;right:12.5%}
+.track a{position:relative;display:flex;flex-direction:column;align-items:center;gap:9px;text-decoration:none;font-weight:700;font-size:13.5px;color:var(--ink2);padding-bottom:12px;text-align:center}
+.track a .d{width:31px;height:31px;border-radius:50%;background:var(--card);border:1.5px solid var(--ink);display:grid;place-items:center;font:500 10.5px/1 var(--mono);color:var(--ink);transition:.2s}
+.track a:hover .d{background:var(--ink);color:var(--bg)}
+.band{display:grid;gap:6px;margin-bottom:24px}
+.band.b6{grid-template-columns:4fr 1fr 1fr} .band.b4{grid-template-columns:1fr 1fr 1fr 1fr}
+.band div{font:500 10.5px/1.35 var(--mono);text-transform:uppercase;letter-spacing:.06em;padding:9px 10px;border-radius:9px;background:var(--bg2);color:var(--ink2);text-align:center}
+.band div:last-child{background:var(--ink);color:var(--bg)}
+.band.b6 div:nth-child(2){background:#d9d1c1}
+.steps{display:grid;gap:16px}
+.steps.s6{grid-template-columns:repeat(3,minmax(0,1fr))} .steps.s4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;scroll-margin-top:calc(var(--hd) + 24px)}
+.step-m{position:relative;aspect-ratio:16/10;background:#0f0e0c;overflow:hidden}
+.step-m img,.step-m video{width:100%;height:100%;object-fit:cover}
+.lay{position:absolute;left:12px;top:12px;font:500 10px/1 var(--mono);text-transform:uppercase;letter-spacing:.07em;background:rgba(23,21,15,.8);color:#fff;padding:7px 9px;border-radius:999px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.lay.o{background:var(--acc);color:var(--ink)}
+.step-b{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.step-n{display:flex;gap:10px;font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--mute)}
+.step-n b{color:var(--acc);font-weight:500}
+.step h4{font-size:19px;letter-spacing:-.025em;line-height:1.22;margin:10px 0 8px}
+.step p.tx{font-size:15px;line-height:1.55;color:var(--mute)}
+.fact{margin-top:auto;padding-top:16px}
+.fact span{display:block;padding-top:14px;border-top:1px dashed var(--line2);font-size:14px;color:var(--mute)}
+.fact b{color:var(--ink);font-weight:800}
+.ana{background:var(--ink);color:var(--bg);display:flex;align-items:center;padding:14px 16px}
+.ana-in{width:100%}
+.ana .x{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font:500 10px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;margin-bottom:9px}
+.ana .x s{color:var(--mute2);text-decoration-color:var(--acc);text-decoration-thickness:2px}
+.ana .x .i{width:13px;height:13px;color:var(--acc)}
+.ana .x span{color:var(--bg)}
+.ana ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.ana li{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px;line-height:1.2;padding:7px 10px;border:1px solid rgba(245,242,234,.16);border-radius:9px}
+.ana li .i{width:16px;height:16px;color:var(--acc)}
+.prec{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:16px;margin-top:16px}
+.chart{padding:30px 32px}
+.chart h4{font-size:22px;letter-spacing:-.03em;margin:14px 0 6px}
+.chart .sub{font-size:15px;color:var(--mute)}
+.lgd{display:flex;flex-wrap:wrap;gap:8px 20px;margin:22px 0 6px;font-size:13.5px;color:var(--mute)}
+.lgd span{display:inline-flex;align-items:center;gap:8px}
+.lgd i{width:12px;height:12px;border-radius:3px;background:var(--line2)} .lgd i.s1{background:var(--ink)}
+.bgp{margin-top:20px}
+.bgp p{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-weight:700;font-size:15px;margin-bottom:9px}
+.delta{font:500 11px/1 var(--mono);padding:6px 8px;border-radius:999px;background:var(--tint);color:var(--ink);white-space:nowrap}
+.br{position:relative;height:30px;border-radius:7px;background:var(--bg);margin-bottom:6px}
+.br span{position:absolute;left:0;top:0;bottom:0;width:var(--v);border-radius:7px;background:var(--line2)}
+.br.s1 span{background:var(--ink)}
+.br b{position:absolute;top:50%;left:var(--v);transform:translate(calc(-100% - 10px),-50%);font-size:13.5px;font-weight:800;color:var(--ink)}
+.br.s1 b{color:#fff}
+.note{font-size:14px;color:var(--mute);margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.ecart{padding:16px;display:flex;flex-direction:column}
+.ecart img{width:100%;height:auto;border-radius:10px;background:#111}
+.ecart figcaption,.fig figcaption{font-size:14px;line-height:1.5;color:var(--mute);margin-top:12px}
+.fig figcaption b,.ecart figcaption b{color:var(--ink)}
+.duo{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:16px;margin-top:16px}
+.fig{padding:14px}
+.fig .cmp{border-radius:12px}
+.liv{padding:28px 28px 26px;display:flex;flex-direction:column}
+.liv h4{font-size:20px;letter-spacing:-.025em;margin:14px 0 14px}
+.lv{list-style:none;margin:0;padding:0}
+.lv li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.45}
+.lv li:last-child{border-bottom:0}
+.lv .i{width:18px;height:18px;margin-top:1px;color:var(--mute)}
+.st{margin-top:auto;padding-top:16px;font-size:13.5px;color:var(--mute);display:flex;gap:8px;align-items:center}
+.st i{width:7px;height:7px;border-radius:50%;background:var(--acc);flex:none}
+.d2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.quote{background:var(--ink);color:var(--bg);border-radius:20px;padding:36px 36px 30px;display:flex;flex-direction:column}
+.quote .qm{width:38px;height:30px;color:var(--acc)}
+.quote blockquote{margin:22px 0 0}
+.quote .by{margin-bottom:28px}
+.quote .bfm{grid-template-columns:minmax(0,1fr);gap:12px}.quote .bfm-l{justify-self:start}
+.quote blockquote p{font-size:clamp(20px,1.65vw,23px);font-weight:700;letter-spacing:-.025em;line-height:1.32;text-wrap:pretty}
+.quote .by{margin-top:18px;font-size:14.5px;color:#bdb6a8} .quote .by b{color:var(--bg)}
+.bfm{margin-top:auto;padding-top:22px;border-top:1px solid rgba(245,242,234,.15);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
+.bfm-l{font:500 11px/1.25 var(--mono);text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--acc);color:var(--bg);padding:10px 11px;border-radius:10px;text-align:center}
+.bfm p{font-size:14px;line-height:1.5;color:#bdb6a8}
+.d3{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr)}
+.film{padding:14px}
+.film video{width:100%;aspect-ratio:16/9;object-fit:contain;border-radius:12px;background:#000}
+.film figcaption{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--mute);margin-top:12px}
+.film figcaption b{color:var(--ink)}
+.suites{display:flex;flex-direction:column;gap:12px;justify-content:center}
+.suites>.eb{margin:4px 0 2px}
+.sui{padding:12px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:18px;align-items:center}
+.sui img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:9px}
+.sui figcaption{font-size:14px;line-height:1.45;color:var(--mute)}
+.sui figcaption b{display:block;color:var(--ink);font-size:15px;margin-bottom:2px}
+.lk{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;text-decoration:none;margin-top:6px}
+.lk .i{width:16px;height:16px;color:var(--acc);transition:transform .2s} .lk:hover .i{transform:translateX(3px)}
+.swap{margin-top:28px;display:flex;justify-content:center}
+
+/* Livrables */
+.dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.dli{padding:22px 22px 20px;display:flex;flex-direction:column;gap:12px;min-height:236px}
+.dli h3{font-size:17.5px;letter-spacing:-.02em;line-height:1.25;margin-top:4px}
+.dli p{font-size:14.5px;line-height:1.5;color:var(--mute)}
+.pls{margin-top:auto;display:flex;gap:6px;align-items:center;padding-top:6px}
+.pl{width:26px;height:26px;border-radius:8px;font:500 11px/24px var(--mono);text-align:center;border:1px solid var(--line);color:#c4bcac}
+.pl.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pl.dv{border:1px dashed var(--ink2);color:var(--ink2)}
+.pls small{font-size:12px;color:var(--mute);margin-left:4px}
+.pl-lg{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:16px;font-size:13.5px;color:var(--mute)}
+.pl-lg span{display:inline-flex;align-items:center;gap:8px}
+.pl-lg .pl{width:18px;height:18px;line-height:16px;font-size:0;border-radius:5px}
+.uses{margin-top:40px;padding:26px 28px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,2fr);gap:20px 40px;align-items:center}
+.uses p{font-size:15px;color:var(--mute);line-height:1.5} .uses p b{display:block;color:var(--ink);font-size:19px;letter-spacing:-.02em;margin-bottom:4px}
+.uses ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.uses li{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;padding:9px 14px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.uses li .i{width:16px;height:16px;color:var(--mute)}
+
+/* Méthode */
+.ms{list-style:none;margin:0;padding:34px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;position:relative}
+.ms::before{content:"";position:absolute;top:8px;left:10px;right:10px;height:1.5px;background:var(--line2)}
+.ms li{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px 20px;display:flex;flex-direction:column}
+.ms li::before{content:"";position:absolute;top:-33px;left:20px;width:15px;height:15px;border-radius:50%;background:var(--paper);border:1.5px solid var(--ink2)}
+.ms li.j{border-color:var(--ink);box-shadow:var(--sh)}
+.ms li.j::before{background:var(--acc);border-color:var(--acc)}
+.when{font:500 11.5px/1.2 var(--mono);letter-spacing:.04em;color:var(--ink);white-space:nowrap}
+.jb{position:absolute;top:-12px;right:16px;display:inline-flex;align-items:center;gap:6px;font:500 10px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;padding:6px 9px;border-radius:999px;background:var(--ink);color:var(--bg)}
+.jb .i{width:11px;height:11px;stroke-width:2.4;color:var(--acc)}
+.ms h3{font-size:18px;letter-spacing:-.02em;line-height:1.25;margin:14px 0 4px}
+.ms .r{font-size:14px;line-height:1.5;color:var(--mute);padding-top:12px;margin-top:12px;border-top:1px solid var(--line)}
+.ms .r b{display:block;font:500 10px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);margin-bottom:5px}
+.ms .r.v{color:var(--ink);font-weight:600}
+.ms-note{margin-top:22px;display:flex;align-items:center;gap:10px;font-size:15px;color:var(--mute)}
+.ms-note .i{color:var(--acc)}
+
+/* Prix */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.plan{position:relative;padding:34px 30px 30px;display:flex;flex-direction:column}
+.plan.rec{background:var(--ink);color:var(--bg);border-color:var(--ink);box-shadow:0 30px 60px -30px rgba(23,21,15,.6)}
+.plan .pk{display:flex;align-items:center;gap:12px}
+.pk .lt{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font:500 14px/1 var(--mono);background:var(--bg);color:var(--ink)}
+.rec .pk .lt{background:var(--acc)}
+.plan h3{font-size:24px;letter-spacing:-.03em}
+.plan .for{font-size:15px;color:var(--mute);margin-top:12px;min-height:46px}
+.rec .for,.rec .pn{color:#bdb6a8}
+.price{margin-top:24px;font-size:46px;font-weight:800;letter-spacing:-.05em;line-height:1;white-space:nowrap}
+.price small{font-size:16px;letter-spacing:0;font-weight:700;margin-left:6px}
+.price .from{display:block;font-size:13px;font-weight:600;letter-spacing:0;color:var(--mute);margin-bottom:6px}
+.pn{font-size:13.5px;color:var(--mute);margin-top:8px}
+.plan ul{list-style:none;margin:24px 0 28px;padding:20px 0 0;border-top:1px solid var(--line)}
+.rec ul{border-top-color:rgba(245,242,234,.15)}
+.plan li{position:relative;padding:6px 0 6px 28px;font-size:15px;line-height:1.45}
+.plan li .i{position:absolute;left:0;top:8px;width:17px;height:17px;color:var(--acc);stroke-width:2.4}
+.plan li.plus{padding-left:0;font-weight:700;font-size:14px;color:#bdb6a8}
+.plan .btn{margin-top:auto;width:100%}
+.flag{position:absolute;top:-13px;left:30px;font:500 10.5px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;padding:8px 11px;border-radius:999px;background:var(--acc);color:var(--ink)}
+.flag.k{background:var(--ink);color:var(--bg);display:inline-flex;align-items:center;gap:6px}
+.flag.k .i{width:12px;height:12px;stroke-width:2.2}
+.plan.gc{border-color:var(--ink2)}
+.terms{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px 24px;font-size:14px;color:var(--mute)}
+.terms b{color:var(--ink)}
+.ct{margin-top:64px}
+.ct-h{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.ct-h h3{font-size:26px;letter-spacing:-.03em}
+.ct-h p{font-size:15px;color:var(--mute);margin-top:6px}
+.ct-sw{display:none;gap:6px}
+.ctw{background:var(--card);border:1px solid var(--line);border-radius:20px}
+.ctw table{width:100%;border-collapse:separate;border-spacing:0;font-size:14.5px;line-height:1.45;table-layout:fixed}
+.ctw th,.ctw td{padding:14px 20px;text-align:left;vertical-align:middle;border-bottom:1px solid var(--line)}
+.ctw thead th:first-child{width:34%}
+.ctw thead th{position:sticky;top:var(--hd);z-index:3;background:var(--card);vertical-align:bottom;border-bottom:1.5px solid var(--ink);padding-top:18px;padding-bottom:16px}
+.ctw thead th:first-child{border-top-left-radius:20px} .ctw thead th:last-child{border-top-right-radius:20px}
+.ctw thead .pk2{display:block;font:500 10.5px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mute);margin-bottom:6px}
+.ctw thead b{display:block;font-size:17px;letter-spacing:-.02em}
+.ctw thead .pr{display:block;font-size:14px;font-weight:600;color:var(--mute);margin-top:2px}
+.ctw .cb{background:#fcf9f2}
+.ctw thead th.cb{background:#fcf9f2}
+.ctw tbody th{font-weight:600;color:var(--ink)}
+.ctw tr.g th{font:500 10.5px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.09em;color:var(--mute);background:var(--paper);padding-top:12px;padding-bottom:12px}
+.ctw tbody tr:last-child th,.ctw tbody tr:last-child td{border-bottom:0}
+.ctw tbody tr:last-child th:first-child{border-bottom-left-radius:20px} .ctw tbody tr:last-child td:last-child{border-bottom-right-radius:20px}
+.ctw td{color:var(--ink2)}
+.y{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;vertical-align:middle}
+.y .i{width:13px;height:13px;stroke-width:2.8}
+.no{display:inline-block;width:14px;height:2px;border-radius:2px;background:#cfc7b6;vertical-align:middle}
+.ctw tr.tot th,.ctw tr.tot td{font-weight:800;font-size:16px;color:var(--ink);padding-top:18px;padding-bottom:18px}
+.ctw tr.tot td small{display:block;font-weight:500;font-size:13px;color:var(--mute)}
+
+/* Achats */
+.ach{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:16px;align-items:start}
+.chk{list-style:none;margin:0;padding:8px 30px}
+.chk li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:16px;padding:19px 0;border-bottom:1px solid var(--line)}
+.chk li:last-child{border-bottom:0}
+.bx{width:26px;height:26px;border-radius:8px;background:var(--ink);display:grid;place-items:center;margin-top:1px}
+.bx .i{width:15px;height:15px;color:var(--acc);stroke-width:3}
+.chk b{display:block;font-size:16.5px;letter-spacing:-.01em;line-height:1.3}
+.chk div>span{display:block;font-size:14.5px;line-height:1.5;color:var(--mute);margin-top:4px}
+.chk em{font-style:normal;font:500 10px/1 var(--mono);text-transform:uppercase;letter-spacing:.07em;padding:4px 6px;border-radius:999px;border:1px solid var(--line2);color:var(--mute);margin-left:8px;vertical-align:2px;white-space:nowrap}
+.who{background:var(--ink);color:var(--bg);border-radius:20px;padding:30px 30px 28px;position:sticky;top:calc(var(--hd) + 24px)}
+.who h3{font-size:22px;letter-spacing:-.03em;margin:14px 0 6px}
+.who .ds{font-size:15px;color:#bdb6a8}
+.who .eb{color:#d8d2c6}
+.rl{list-style:none;margin:20px 0 0;padding:0}
+.rl li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px solid rgba(245,242,234,.14)}
+.rl .ic{background:rgba(245,242,234,.08);color:var(--bg)}
+.rl b{display:block;font-size:15.5px}
+.rl div>span{display:block;font-size:14px;line-height:1.45;color:#bdb6a8;margin-top:3px}
+.who .src{margin-top:8px;padding:16px 18px;border-radius:14px;background:rgba(245,242,234,.07);font-size:14px;line-height:1.5;color:#d8d2c6}
+.who .src b{color:var(--bg)}
+
+/* FAQ */
+.fq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:72px;align-items:start}
+.fq-h{position:sticky;top:calc(var(--hd) + 32px)}
+.fq-h h2{font-size:clamp(31px,3.5vw,48px);margin:16px 0 18px}
+.fq-h .obj{margin-top:4px}
+.fq-h .lead{font-size:16.5px;margin-bottom:24px}
+.qa{border-top:1px solid var(--line2)}
+.qa details{border-bottom:1px solid var(--line2)}
+.qa summary{list-style:none;cursor:pointer;padding:22px 48px 22px 0;font-weight:700;font-size:17.5px;letter-spacing:-.015em;line-height:1.35;position:relative}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"";position:absolute;right:4px;top:50%;width:30px;height:30px;margin-top:-15px;border-radius:50%;border:1px solid var(--line2);background:linear-gradient(var(--ink),var(--ink)) center/11px 1.6px no-repeat,linear-gradient(var(--ink),var(--ink)) center/1.6px 11px no-repeat;transition:transform .25s,background-color .2s}
+.qa details[open] summary::after{transform:rotate(45deg);background-color:var(--card)}
+.qa summary .qn{font:500 11px/1 var(--mono);color:var(--acc);margin-right:12px;vertical-align:2px}
+.qa .ans{padding:0 48px 24px 0;color:var(--mute);font-size:16px;line-height:1.6}
+
+/* Final */
+.final{background:var(--ink);color:var(--bg);padding:112px 0 0;overflow:hidden}
+.final .eb{color:#d8d2c6}
+.fin{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px 72px;align-items:end}
+.final h2{font-size:clamp(36px,4.6vw,64px);letter-spacing:-.04em;line-height:1;margin-top:20px;text-wrap:balance}
+.final .lead{color:#bdb6a8;margin-bottom:28px}
+.recap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:64px}
+.rc{border:1px solid rgba(245,242,234,.16);border-radius:18px;padding:22px 24px 24px;display:flex;flex-direction:column;gap:6px}
+.rc.rec{border-color:var(--acc);background:rgba(242,106,31,.06)}
+.rc .pk3{display:flex;justify-content:space-between;align-items:center;gap:8px;font:500 10.5px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:#bdb6a8}
+.rc .pk3 em{font-style:normal;padding:5px 7px;border-radius:999px;background:var(--acc);color:var(--ink);white-space:nowrap}
+.rc .pk3 em.k{background:rgba(245,242,234,.12);color:var(--bg)}
+.rc b{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.15;margin-top:8px}
+.rc b small{font-size:14px;letter-spacing:0;margin-left:4px}
+.rc>span{font-size:14px;line-height:1.5;color:#bdb6a8}
+.ft{margin-top:96px;padding:28px 0 36px;border-top:1px solid rgba(245,242,234,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 24px;font-size:13px;color:#8f897c}
+.ft .sig{font:500 11px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.1em} .ft .sig b{color:var(--acc);font-weight:500}
+.ft a{color:inherit}
+
+/* Adaptatif */
+@media (max-width:1240px){.hd-btn .lg{display:none}.hd-btn .sm{display:inline}}
+@media (max-width:1100px){.wrap{padding:0 28px}.proofs div{grid-template-columns:150px minmax(0,1fr)}.proofs dt{font-size:21px}.nav a{padding:8px 8px;font-size:13.5px}.steps.s4{grid-template-columns:repeat(2,minmax(0,1fr))}.band.b4,.track.t4{display:none}.dl{grid-template-columns:repeat(2,minmax(0,1fr))}.dli{min-height:0}.ms{grid-template-columns:repeat(3,minmax(0,1fr))}.ms::before{display:none}.ms li::before{display:none}.ms{padding-top:0}}
+@media (max-width:1020px){.nav{display:none}.hd-btn{margin-left:auto}}
+@media (max-width:980px){
+ .sec{padding:84px 0}
+ .hero .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"t" "v" "m"}
+ .hv{margin:28px 0 0}
+ .sh{grid-template-columns:minmax(0,1fr);gap:18px;margin-bottom:40px}
+ .sh h2{max-width:22ch}
+ .logos .wrap{flex-direction:column;align-items:flex-start;gap:14px}
+ .logos ul{justify-content:flex-start;gap:8px 26px}
+ .sit-h{display:none}
+ .sit{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 28px}
+ .sit h3{grid-column:1/-1}
+ .sit p[data-l]::before{content:attr(data-l);display:block;font:500 10px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.09em;color:var(--ink2);margin-bottom:5px}
+ .ci{grid-template-columns:minmax(0,1fr);gap:28px}
+ .steps.s6{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .track.t6,.band.b6{display:none}
+ .prec,.duo,.d2,.d3{grid-template-columns:minmax(0,1fr)}
+ .ecart{flex-direction:row;gap:18px;align-items:center}.ecart img{width:44%}
+ .uses{grid-template-columns:minmax(0,1fr)}
+ .plans{grid-template-columns:minmax(0,1fr);max-width:620px;margin:0 auto}
+ .plan .for{min-height:0}
+ .ach{grid-template-columns:minmax(0,1fr)}
+ .who{position:static}
+ .fq{grid-template-columns:minmax(0,1fr);gap:28px}
+ .fq-h{position:static}
+ .fin{grid-template-columns:minmax(0,1fr);align-items:start}
+ .recap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+ .ms{grid-template-columns:minmax(0,1fr);padding-left:26px}
+ .ms::before{display:block;top:10px;bottom:10px;left:7px;right:auto;width:1.5px;height:auto}
+ .ms li::before{display:block;top:22px;left:-26px}
+ .ct-sw{display:flex}
+ .ctw[data-show=a] .cb,.ctw[data-show=a] .cc,.ctw[data-show=b] .ca,.ctw[data-show=b] .cc,.ctw[data-show=c] .ca,.ctw[data-show=c] .cb{display:none}
+ .ctw table{table-layout:auto}
+ .ctw thead th:first-child{width:50%}
+ .ctw thead th.ca,.ctw thead th.cb,.ctw thead th.cc{border-top-right-radius:20px}
+ .ctw tbody tr:last-child td{border-bottom-right-radius:20px}
+}
+@media (max-width:640px){
+ body{font-size:16px}
+ .wrap{padding:0 18px}
+ :root{--hd:62px}
+ .hd .wrap{gap:12px}
+ .hd .logo{font-size:20px}
+ .lr-leg{letter-spacing:.12em}
+ .hd-btn{padding:10px 14px;font-size:13.5px}
+ .sec{padding:72px 0}
+ .hero{padding:34px 0 64px}
+ .hero h1{font-size:clamp(34px,10vw,44px)}
+ .hero .lead{font-size:16.5px}
+ .proofs div{grid-template-columns:minmax(0,1fr);gap:4px;padding:14px 0}
+ .proofs dt{font-size:24px}
+ .ctas .btn{width:100%}
+ .tag{font-size:9.5px;padding:6px 8px;top:10px}.tag.tl{left:10px}.tag.tr{right:10px}
+ .cmp-knob{width:40px;height:40px;margin:-20px 0 0 -20px}
+ .l3{grid-template-columns:minmax(0,1fr);border-top:0}
+ .l3 li{position:relative;padding:11px 0 11px 30px;border-top:1px solid var(--line2)}
+ .l3 li::before{position:absolute;left:0;top:15px;margin:0}
+ .l3 b{display:inline;font-size:14.5px}
+ .logos li{font-size:16px}
+ .logos ul{gap:6px 20px}
+ .lead{font-size:16.5px}
+ .obj{font-size:16px}
+ .sit{grid-template-columns:minmax(0,1fr);padding:22px 20px;gap:12px}
+ .tabs{gap:8px;margin-bottom:28px}
+ .tab{padding:14px 14px 16px;border-radius:14px}
+ .tab .tk span:last-child,.tab .ts{display:none}
+ .tab b{font-size:17px;margin:8px 0 0}
+ .tab[aria-selected=true]::after{left:14px;right:14px}
+ .kf b{font-size:26px} .kf b.t{font-size:18px} .kf div{padding:16px}
+ .steps.s6,.steps.s4{grid-template-columns:minmax(0,1fr)}
+ .chart{padding:24px 20px}
+ .ecart{flex-direction:column}.ecart img{width:100%}
+ .quote{padding:28px 24px 24px}
+ .bfm{grid-template-columns:minmax(0,1fr);gap:12px}.bfm-l{justify-self:start}
+ .sui{grid-template-columns:110px minmax(0,1fr);gap:14px}
+ .dl{grid-template-columns:minmax(0,1fr);gap:10px}
+ .dli{display:grid;grid-template-columns:38px minmax(0,1fr);gap:4px 14px;padding:16px 16px 14px;align-items:start}
+ .dli .ic{grid-row:1/4}
+ .dli h3{margin-top:0;font-size:16.5px}
+ .dli p{font-size:14px}
+ .pls{padding-top:6px}
+ .hm{display:none}
+ .h-t .eb .n::after{display:none}
+ .ecart img{max-width:300px;margin:0 auto}
+ .uses{padding:22px 20px}
+ .plan{padding:32px 22px 24px}
+ .price{font-size:40px}
+ .ctw th,.ctw td{padding:12px 14px}
+ .ctw thead th{padding-top:14px}
+ .chk{padding:4px 20px}
+ .who{padding:26px 22px}
+ .qa summary{font-size:16.5px;padding-right:44px}
+ .qa .ans{padding-right:0;font-size:15.5px}
+ .final{padding-top:80px}
+ .final .ctas .btn{width:100%}
+ .ft{margin-top:64px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+.cine{position:relative;height:min(78vh,680px);min-height:380px;overflow:hidden;background:#0e0d0a;color:#f5f2ea}
+.cine video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cine:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,13,10,.15) 30%,rgba(14,13,10,.82))}
+.cine-t{position:absolute;left:0;right:0;bottom:44px;z-index:2}
+.cine-k{font:500 12px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.cine-h{font-weight:800;letter-spacing:-.04em;line-height:1.02;font-size:clamp(34px,5.4vw,72px);margin-top:10px}
+.cine-s{max-width:56ch;margin-top:14px;color:rgba(245,242,234,.78);font-size:16px}
+details.ctd{margin-top:34px;border:1px solid var(--line2);border-radius:18px;background:var(--paper)}
+details.ctd>summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:800;letter-spacing:-.01em;display:flex;justify-content:space-between;align-items:center}
+details.ctd>summary::-webkit-details-marker{display:none}
+details.ctd>summary:after{content:"+";font-size:22px;color:var(--acc);font-weight:700}
+details.ctd[open]>summary:after{content:"–"}
+details.ctd>.ct{margin:0;padding:0 14px 14px}
+@media (max-width:720px){.cine{height:72vh}.cine-t{bottom:28px}}
+/* Téléphone : les étapes et les jalons défilent au doigt au lieu de s empiler */
+@media (max-width:640px){
+ .steps.s6,.steps.s4{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 18px;gap:12px;margin:0 -18px;padding:0 18px 12px;scrollbar-width:none}
+ .steps.s6::-webkit-scrollbar,.steps.s4::-webkit-scrollbar,.ms::-webkit-scrollbar{display:none}
+ .steps .step{flex:0 0 84%;scroll-snap-align:start}
+ .ms{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 18px;gap:12px;margin:0 -18px!important;padding:4px 18px 12px!important;scrollbar-width:none}
+ .ms::before,.ms li::before{display:none!important}
+ .ms>li{flex:0 0 80%;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px!important}
+ .sit p[data-l="Ce qui bloque"]{display:none}
+ .glisse{display:block}
+}
+.glisse{display:none;font:500 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:-4px 0 12px}
+
+/* Le mix : une seule barre où les trois outils se mélangent, et dont le dosage bouge */
+.mix{margin-top:22px;padding-top:16px;border-top:1px solid var(--line2)}
+.mix-top{display:flex;justify-content:space-between;align-items:baseline;gap:6px 16px;flex-wrap:wrap}
+.mix-k{font:500 10.5px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.mix-leg{display:flex;gap:14px;font:500 10.5px/1.4 var(--mono);color:var(--mute);letter-spacing:.03em}
+.mix-leg span{display:inline-flex;align-items:center;gap:6px}
+.mix-leg span:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.mix-bar{position:relative;height:14px;border-radius:99px;overflow:hidden;margin:10px 0 14px;background:var(--bg2)}
+.mix-in{position:absolute;inset:-8px -14px;display:flex;filter:blur(5px)}
+.mix-in i{display:block;height:100%}
+.mix-in .m1{background:#17150f;width:40%;animation:mx1 9s ease-in-out infinite}
+.mix-in .m2{background:#f26a1f;width:34%;animation:mx2 9s ease-in-out infinite}
+.mix-in .m3{background:#f7b98f;flex:1}
+@keyframes mx1{0%,100%{width:40%}33%{width:24%}66%{width:52%}}
+@keyframes mx2{0%,100%{width:34%}33%{width:46%}66%{width:22%}}
+.mix-t{font-size:14.5px;line-height:1.5;color:var(--mute)}
+.mix-t b{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){.mix-in i{animation:none!important}}
+/* Références clients : de vrais logos, bien visibles */
+.logos{padding:38px 0}
+.logos .wrap{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:22px 48px;align-items:center}
+.logos .lg-k{font:500 10.5px/1.5 var(--mono);color:var(--acc);text-transform:uppercase;letter-spacing:.1em;width:auto}
+.logos .lg-t{font:800 25px/1.15 var(--sans);letter-spacing:-.03em;color:var(--ink);margin-top:8px;text-transform:none;width:auto}
+.logos .lg-t em{font-style:normal;color:var(--acc)}
+.logos ul.lg-l{display:grid;grid-template-columns:repeat(7,auto);justify-content:space-between;gap:18px 14px;align-items:start}
+.logos .lg-l li{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;font:650 12.5px/1.25 var(--sans);letter-spacing:-.005em;color:var(--ink2);white-space:nowrap}
+.logos .lg-l li.dup{display:none}
+.lg-m{height:58px;display:flex;align-items:center;justify-content:center}
+.lg-l img{display:block;height:var(--h);width:auto}
+@media (max-width:820px){.logos .wrap{grid-template-columns:minmax(0,1fr)}}
+/* Téléphone : une ligne qui défile en boucle */
+@media (max-width:640px){
+ .logos .lg-t{font-size:22px}
+ .lg-v{overflow:hidden;margin:0 -18px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+ .logos ul.lg-l{display:flex;width:max-content;gap:0;animation:lg-defile 26s linear infinite}
+ .logos .lg-l li,.logos .lg-l li.dup{display:flex;flex:none;width:104px;padding:0 6px;font-size:11.5px}
+ .lg-m{height:48px}
+ .lg-l img{height:calc(var(--h)*.8)}
+}
+@keyframes lg-defile{to{transform:translateX(-50%)}}
+@media (max-width:640px) and (prefers-reduced-motion:reduce){
+ .lg-v{overflow-x:auto}.logos ul.lg-l{animation:none}.logos .lg-l li.dup{display:none}
+}
+</style>
+</head>
+<body>
+<svg aria-hidden="true" height="0" style="position:absolute" width="0">
+<symbol id="i-check" viewbox="0 0 24 24"><path d="M4.5 12.5l5 5L19.5 7"></path></symbol>
+<symbol id="i-arrow" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></symbol>
+<symbol id="i-lr" viewbox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"></path></symbol>
+<symbol id="i-brief" viewbox="0 0 24 24"><rect height="13" rx="2" width="18" x="3" y="7"></rect><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18"></path></symbol>
+<symbol id="i-stand" viewbox="0 0 24 24"><rect height="12" rx="2" width="18" x="3" y="4"></rect><path d="M12 16v4M8 20h8M10 8.5v4l3.5-2z"></path></symbol>
+<symbol id="i-chart" viewbox="0 0 24 24"><path d="M3 20h18M6 16l4-5 3 3 6-7M15 7h4v4"></path></symbol>
+<symbol id="i-learn" viewbox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"></path><path d="M6 11v5c3.5 2.5 8.5 2.5 12 0v-5M22 9v6"></path></symbol>
+<symbol id="i-heritage" viewbox="0 0 24 24"><path d="M3 9l9-5 9 5zM4 20h16M6 20v-8M10 20v-8M14 20v-8M18 20v-8M3 9h18"></path></symbol>
+<symbol id="i-film" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M7 5v14M17 5v14M3 9.5h4M3 14.5h4M17 9.5h4M17 14.5h4"></path></symbol>
+<symbol id="i-board" viewbox="0 0 24 24"><rect height="7" rx="1.5" width="8" x="3" y="4"></rect><rect height="7" rx="1.5" width="8" x="13" y="4"></rect><rect height="7" rx="1.5" width="8" x="3" y="13"></rect><rect height="7" rx="1.5" width="8" x="13" y="13"></rect></symbol>
+<symbol id="i-cube" viewbox="0 0 24 24"><path d="M12 2.5l8.5 4.75v9.5L12 21.5l-8.5-4.75v-9.5z"></path><path d="M12 12l8.5-4.75M12 12v9.5M12 12L3.5 7.25"></path></symbol>
+<symbol id="i-mic" viewbox="0 0 24 24"><rect height="11" rx="3" width="6" x="9" y="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></symbol>
+<symbol id="i-loop" viewbox="0 0 24 24"><path d="M17 2l3 3-3 3"></path><path d="M4 11V9a4 4 0 0 1 4-4h12"></path><path d="M7 22l-3-3 3-3"></path><path d="M20 13v2a4 4 0 0 1-4 4H4"></path></symbol>
+<symbol id="i-phone" viewbox="0 0 24 24"><rect height="19" rx="2.5" width="10" x="7" y="2.5"></rect><path d="M11 18h2"></path></symbol>
+<symbol id="i-sign" viewbox="0 0 24 24"><path d="M14 3H6.5A2.5 2.5 0 0 0 4 5.5v13A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5V9z"></path><path d="M14 3v6h6M8 16.5c1.5-2.2 2.5-2.2 3.5 0s2.2 2.2 4 0"></path></symbol>
+<symbol id="i-folder" viewbox="0 0 24 24"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2h7.5A2.5 2.5 0 0 1 21 9.5v8a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"></path></symbol>
+<symbol id="i-lock" viewbox="0 0 24 24"><rect height="10" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></symbol>
+<symbol id="i-user" viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path></symbol>
+<symbol id="i-gear" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"></path></symbol>
+<symbol id="i-shield" viewbox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></symbol>
+<symbol id="i-flow" viewbox="0 0 24 24"><path d="M3 12h4l3-6 4 12 3-6h4"></path></symbol>
+<symbol id="i-clock" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></symbol>
+<symbol id="i-eye" viewbox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></symbol>
+<symbol id="i-users" viewbox="0 0 24 24"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20c0-3.6 3-5.5 6.5-5.5s6.5 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 14.8c2 .7 3 2.4 3 5.2"></path></symbol>
+<symbol id="i-mega" viewbox="0 0 24 24"><path d="M3 10v4h4l6 4V6L7 10z"></path><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a7.5 7.5 0 0 1 0 11"></path></symbol>
+<symbol id="i-receipt" viewbox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6M9 16h3"></path></symbol>
+<symbol id="i-quote" viewbox="0 0 38 30"><path d="M0 30V17.6C0 7.3 5.1 1.4 15.2 0l1.3 4.4c-5.2 1.4-7.8 4.6-8 9.6h7.3V30zm21.5 0V17.6C21.5 7.3 26.6 1.4 36.7 0L38 4.4c-5.2 1.4-7.8 4.6-8 9.6h7.3V30z" fill="currentColor" stroke="none"></path></symbol>
+</svg>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="hd" id="hd"><div class="wrap">
+<a class="logo" href="https://madh-ia.com/" style="color:inherit"><span aria-label="Madh.IA" class="logo lr">Madh<span style="color:#f26a1f">.</span><span aria-hidden="true" class="lr-win" style="color:#f26a1f"><span class="lr-col"><span>IA</span><span>3D</span><span>VFX</span><span>Film</span><span>IA</span></span></span><span class="lr-leg"><b>M</b>edia <b>A</b>rt <b>D</b>igital <b>H</b>ybrid</span></span></a>
+<nav aria-label="Sections de la page" class="nav"><a href="#pour-qui">Pour qui</a><a href="#cas">Les deux cas</a><a href="#methode">Méthode</a><a href="#prix">Prix</a><a href="#achats">Achats</a><a href="#faq">Questions</a></nav>
+<a class="btn btn-o btn-s hd-btn" href="mailto:mad.tortel@gmail.com?subject=Diagnostic%20Filmer%20l%27impossible"><span class="lg">Réserver un diagnostic de 30 min</span><span class="sm">Diagnostic 30 min</span></a>
+</div></header>
+<main id="main">
+<!-- 1. Héros -->
+<section class="hero" id="haut"><div class="wrap">
+<div class="h-t">
+<p class="eb"><span class="n">Filmer l’impossible</span><span class="hm">Films de technologie</span></p>
+<h1>Montrez ce qu’aucune caméra ne peut filmer.</h1>
+<p class="lead">L’intérieur d’une machine, un procédé enfermé, une technologie invisible : nous en faisons un film qui ressemble à la réalité et que tout le monde comprend, grâce à un mix bien dosé de 3D, d’IA et de motion design. Livré en 3 à 4 semaines.</p>
+</div>
+<figure class="hv">
+<div class="cmp" data-cmp="" id="hero-cmp" style="--p:50%">
+<video aria-hidden="true" autoplay="" class="cmp-a" data-auto="" loop="" muted="" playsinline="" poster="assets/pompe-distribution-3d.webp" preload="metadata" src="assets/pompe-distribution-3d.mp4"></video>
+<video aria-hidden="true" autoplay="" class="cmp-b" data-auto="" loop="" muted="" playsinline="" poster="assets/pompe-distribution-reel.webp" preload="metadata" src="assets/pompe-distribution-reel.mp4"></video>
+<span class="tag tl">Maquette 3D</span><span class="tag tr">Rendu réel</span>
+<span aria-hidden="true" class="cmp-line"></span>
+<span aria-label="Séparateur entre la maquette 3D et le rendu réel" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="cmp-knob" role="slider" tabindex="0"><svg class="i"><use href="#i-lr"></use></svg></span>
+</div>
+<figcaption>
+<div class="hv-bar">
+<div aria-label="Choisir le plan à comparer" class="chips" role="group">
+<button aria-pressed="true" class="chip" data-pair="distribution" type="button">Distribution</button>
+<button aria-pressed="false" class="chip" data-pair="balancier" type="button">Balancier</button>
+<button aria-pressed="false" class="chip" data-pair="contrepoids" type="button">Contrepoids</button>
+</div>
+<span class="hint">Glissez pour comparer · Pompe de Cornouailles</span>
+</div>
+<div class="mix"> <div class="mix-top"><p class="mix-k">Notre mix</p> <p class="mix-leg"><span style="--c:#17150f">3D</span><span style="--c:#f26a1f">IA</span><span style="--c:#f7b98f">Motion design</span></p></div> <div aria-hidden="true" class="mix-bar"><div class="mix-in"><i class="m1"></i><i class="m2"></i><i class="m3"></i></div></div> <p class="mix-t"><b>Comme un mix énergétique, tout est dans le dosage.</b> Nous mélangeons la 3D, l’IA et le motion design à chaque plan, dans la proportion qui donne le meilleur résultat. Une vidéo faite avec un seul outil, ça se voit. Un film bien dosé, on ne voit que le résultat.</p> </div>
+</figcaption>
+</figure>
+<div class="h-m">
+<dl class="proofs">
+<div><dt>1 h 30 <span class="ar">→</span> 1 min</dt><dd>Le temps de présentation d’Argos Metrics, avant puis après son film.</dd></div>
+<div><dt>TV et cinéma</dt><dd>Le film Argos est passé sur BFM Business. Nos films sont aussi diffusés au cinéma.</dd></div>
+<div><dt>1856</dt><dd>La pompe de Cornouailles ne tourne plus. Nous la remettons en marche, à l’image.</dd></div>
+</dl>
+<div class="ctas">
+<a class="btn btn-o" href="mailto:mad.tortel@gmail.com?subject=Diagnostic%20Filmer%20l%27impossible">Réserver un diagnostic de 30 min</a>
+<a class="btn btn-l" href="#prix">Voir les 3 offres</a>
+</div>
+<p class="reass"><span><svg class="i"><use href="#i-check"></use></svg>Prix HT affichés</span><span><svg class="i"><use href="#i-check"></use></svg>Accord de confidentialité</span><span><svg class="i"><use href="#i-check"></use></svg>Droits cédés par écrit</span></p>
+</div>
+</div></section>
+<!-- 2. Clients -->
+<section aria-label="Références clients" class="logos"><div class="wrap"><div class="lg-h"><p class="lg-k">Ils ont travaillé avec Madh.IA</p><p class="lg-t">Des films diffusés <em>à la télévision</em> et <em>au cinéma</em>.</p></div><div class="lg-v"><ul class="lg-l"><li><span class="lg-m"><img alt="" src="assets/logos/argos.png" style="--h:56px"/></span>Argos Metrics</li><li><span class="lg-m"><img alt="" src="assets/logos/decathlon.png" style="--h:50px"/></span>Decathlon</li><li><span class="lg-m"><img alt="" src="assets/logos/france-tv.png" style="--h:36px"/></span>France Télévisions</li><li><span class="lg-m"><img alt="" src="assets/logos/bnp-paribas.svg" style="--h:50px"/></span>BNP Paribas</li><li><span class="lg-m"><img alt="" src="assets/logos/nespresso.png" style="--h:54px"/></span>Nespresso</li><li><span class="lg-m"><img alt="" src="assets/logos/leclerc.png" style="--h:54px"/></span>E.Leclerc</li><li><span class="lg-m"><img alt="" src="assets/logos/bouglione.png" style="--h:48px"/></span>Bouglione</li><li aria-hidden="true" class="dup"><span class="lg-m"><img alt="" src="assets/logos/argos.png" style="--h:56px"/></span>Argos Metrics</li><li aria-hidden="true" class="dup"><span class="lg-m"><img alt="" src="assets/logos/decathlon.png" style="--h:50px"/></span>Decathlon</li><li aria-hidden="true" class="dup"><span class="lg-m"><img alt="" src="assets/logos/france-tv.png" style="--h:36px"/></span>France Télévisions</li><li aria-hidden="true" class="dup"><span class="lg-m"><img alt="" src="assets/logos/bnp-paribas.svg" style="--h:50px"/></span>BNP Paribas</li><li aria-hidden="true" class="dup"><span class="lg-m"><img alt="" src="assets/logos/nespresso.png" style="--h:54px"/></span>Nespresso</li><li aria-hidden="true" class="dup"><span class="lg-m"><img alt="" src="assets/logos/leclerc.png" style="--h:54px"/></span>E.Leclerc</li><li aria-hidden="true" class="dup"><span class="lg-m"><img alt="" src="assets/logos/bouglione.png" style="--h:48px"/></span>Bouglione</li></ul></div></div></section>
+<section aria-label="La pompe de Cornouailles, rendue réelle" class="cine">
+<video aria-hidden="true" autoplay="" data-auto="" loop="" muted="" playsinline="" poster="assets/pompe-balancier-face-reel.webp" preload="metadata" src="assets/pompe-balancier-face-reel.mp4"></video>
+<div class="cine-t wrap">
+<p class="cine-k">Pompe de Cornouailles · 1856</p>
+<p class="cine-h">Elle ne peut plus tourner.<br/>Ce plan n’a pas été filmé.</p>
+<p class="cine-s">Reconstituée à partir des relevés, des archives et des plans, puis rendue réelle par une couche finale d’IA. Aucune caméra n’a filmé cette scène.</p>
+</div>
+</section>
+<!-- 3. Pour qui -->
+<section class="sec" id="pour-qui"><div class="wrap">
+<div class="sh">
+<div><p class="eb"><span class="n">01</span>Pour qui</p><h2>Cinq situations où un film débloque la décision.</h2></div>
+<div><p class="obj"><span>Objection</span>« Est-ce vraiment pour nous ? »</p><p class="lead">Si votre produit se comprend en le regardant, filmez-le. Si l’essentiel est invisible, à l’intérieur, trop petit ou pas encore construit, c’est pour vous.</p></div>
+</div>
+<div class="card sit-t">
+<div aria-hidden="true" class="sit-h"><span>Votre situation</span><span>Ce qui bloque</span><span>Ce que le film fait</span><span>Offre adaptée</span></div>
+<div class="sit">
+<h3><span class="ic"><svg class="i"><use href="#i-brief"></use></svg></span>Vendre une technologie complexe</h3>
+<p data-l="Ce qui bloque">Vos commerciaux passent le rendez-vous à expliquer. Le prospect repart sans avoir compris.</p>
+<p data-l="Ce que le film fait">Il montre le fonctionnement et ce que le client y gagne. Le rendez-vous peut commencer par les questions.</p>
+<p class="fit" data-l="Offre adaptée"><a href="#prix">B · Le Kit commercial</a><span>2 formats, 2 langues, 4K, 3 formats LinkedIn.</span></p>
+</div>
+<div class="sit">
+<h3><span class="ic"><svg class="i"><use href="#i-stand"></use></svg></span>Préparer un salon</h3>
+<p data-l="Ce qui bloque">Un stand bruyant, des visiteurs pressés, aucun son audible.</p>
+<p data-l="Ce que le film fait">Une version de diffusion, en boucle et sans son, pensée pour l’écran du stand.</p>
+<p class="fit" data-l="Offre adaptée"><a href="#prix">B · Le Kit commercial</a><span>Version diffusion incluse.</span></p>
+</div>
+<div class="sit">
+<h3><span class="ic"><svg class="i"><use href="#i-chart"></use></svg></span>Lever des fonds</h3>
+<p data-l="Ce qui bloque">Le procédé existe sur plans, pas encore en usine. L’investisseur doit l’imaginer.</p>
+<p data-l="Ce que le film fait">Il montre le procédé en marche, construit à partir de vos plans.</p>
+<p class="fit" data-l="Offre adaptée"><a href="#prix">A · Le Film</a><span>B pour présenter en 2 langues.</span></p>
+</div>
+<div class="sit">
+<h3><span class="ic"><svg class="i"><use href="#i-learn"></use></svg></span>Former vos équipes</h3>
+<p data-l="Ce qui bloque">Personne n’a jamais vu l’intérieur de la machine. Les schémas ne suffisent pas.</p>
+<p data-l="Ce que le film fait">Une vue en transparence montre chaque pièce, des légendes animées expliquent chaque étape.</p>
+<p class="fit" data-l="Offre adaptée"><a href="#prix">A · Le Film</a><span>1 langue, 1 format au choix.</span></p>
+</div>
+<div class="sit">
+<h3><span class="ic"><svg class="i"><use href="#i-heritage"></use></svg></span>Valoriser un patrimoine industriel</h3>
+<p data-l="Ce qui bloque">La machine ne tourne plus. Aucune image ne la montre en marche.</p>
+<p data-l="Ce que le film fait">Il la remet en mouvement, à l’image, à partir des relevés, des archives et des plans.</p>
+<p class="fit" data-l="Offre adaptée"><a href="#prix">C · Le Grand format</a><span>Un film long pour la visite, ou une série, machine par machine.</span><button class="lk2" data-goto="co" type="button">Voir le cas Cornouailles</button></p>
+</div>
+</div>
+</div></section>
+<!-- 4. Deux procédés, deux cas -->
+<section class="sec alt" id="cas"><div class="wrap">
+<div class="sh">
+<div><p class="eb"><span class="n">02</span>Deux procédés, deux cas</p><h2>Avec des archives et des plans, ou sans rien du tout.</h2></div>
+<div><p class="obj"><span>Objection</span>« Comment savoir que c’est exact ? »</p><p class="lead">Deux projets réels. Le premier part des relevés, des archives et des plans d’une machine de 1856. Le second, d’une technologie où il n’y avait rien à filmer.</p></div>
+</div>
+<div aria-label="Choisir un cas" class="tabs" role="tablist">
+<button aria-controls="p-co" aria-selected="true" class="tab" id="tab-co" role="tab" type="button">
+<span class="tk"><span>Cas 1<span class="hm"> · Machine de 1856</span></span><span>4 étapes</span></span>
+<b>La pompe de Cornouailles</b>
+<span class="ts">Archives et plans, 3D, IA, motion design.</span>
+</button>
+<button aria-controls="p-argos" aria-selected="false" class="tab" id="tab-argos" role="tab" tabindex="-1" type="button">
+<span class="tk"><span>Cas 2<span class="hm"> · Sans plans</span></span><span>4 étapes</span></span>
+<b>Argos Metrics</b>
+<span class="ts">Rendre visible une mesure qu’aucune caméra ne voit.</span>
+</button>
+</div>
+<!-- Onglet Cornouailles -->
+<div aria-labelledby="tab-co" class="pan" id="p-co" role="tabpanel" tabindex="0">
+<div class="ci" style="grid-template-columns:minmax(0,1fr);max-width:860px">
+<div>
+<p class="badge"><i></i>Projet en cours, mené pour le musée</p>
+<h3>Remettre en marche, à l’image, une machine de 1856.</h3>
+<p>C’est la dernière machine à balancier de type Cornouailles subsistant en France. Elle est exposée à l’usine des eaux de Saint-Clair, à Caluire-et-Cuire, près de Lyon. Elle ne peut plus tourner, et aucune image ne la montre en marche.</p>
+<p>Pour la montrer en mouvement sans rien inventer, nous avons d’abord tout rassemblé, puis tout reconstitué. À chaque étape, le bon dosage de 3D, d’IA et de motion design : c’est ce mix qui rend le résultat crédible.</p>
+</div>
+
+</div>
+
+
+<p class="glisse">Faites glisser →</p><div class="steps s4"><article class="step" id="co-1"><div class="step-m"><img alt="Tout rassembler" loading="lazy" src="assets/pompe-nuage-elevation.webp"/><span class="lay">Recherche</span></div><div class="step-b"><p class="step-n"><b>01</b>Recherche</p><h4>Tout rassembler</h4><p class="tx">Relevés du musée, archives, plans d’époque, photos : nous réunissons tout ce qui existe sur la machine avant de dessiner quoi que ce soit.</p><p class="fact"><span><b>Rien d’inventé</b>, tout est sourcé</span></p></div></article><article class="step" id="co-2"><div class="step-m"><img alt="La reconstruire, pièce par pièce" loading="lazy" src="assets/pompe-maquette-machine.webp"/><span class="lay">3D</span></div><div class="step-b"><p class="step-n"><b>02</b>Reconstitution 3D</p><h4>La reconstruire, pièce par pièce</h4><p class="tx">Une reconstitution 3D poussée, fidèle aux plans. Chaque pièce bouge exactement comme dans la vraie machine.</p><p class="fact"><span><b>Chaque pièce</b> à sa place</span></p></div></article><article class="step" id="co-3"><div class="step-m"><img alt="La rendre réelle" loading="lazy" src="assets/pompe-balancier-reel.webp"/><span class="lay">IA</span></div><div class="step-b"><p class="step-n"><b>03</b>Couche finale d’IA</p><h4>La rendre réelle</h4><p class="tx">Une couche finale d’IA donne à chaque plan l’apparence d’un vrai tournage : matières, lumière, salle. Le mouvement, lui, ne change pas.</p><p class="fact"><span><b>Même plan</b>, même mouvement</span></p></div></article><article class="step" id="co-4"><div class="step-m"><img alt="Faire comprendre" loading="lazy" src="assets/pompe-explicatif.webp"/><span class="lay">Motion design</span></div><div class="step-b"><p class="step-n"><b>04</b>Explication</p><h4>Faire comprendre</h4><p class="tx">Une vue en transparence et des légendes animées montrent ce qui se passe à l’intérieur : le piston, la vapeur, l’eau.</p><p class="fact"><span><b>Compris</b> du premier coup</span></p></div></article></div>
+
+
+<div class="swap"><button class="btn btn-l" data-goto="argos" type="button">Voir le cas Argos Metrics, sans plans<svg class="i"><use href="#i-arrow"></use></svg></button></div>
+</div>
+<!-- Onglet Argos -->
+<div aria-labelledby="tab-argos" class="pan" hidden="" id="p-argos" role="tabpanel" tabindex="0">
+<div class="ci">
+<div>
+<p class="badge"><i></i>Film diffusé sur BFM Business</p>
+<h3>Une technologie où il n’y a, littéralement, rien à filmer.</h3>
+<p>Argos Metrics mesure le comportement des clients en magasin au laser, sans caméra et sans visage. Chaque présentation prenait une heure et demie, et le prospect repartait sans avoir compris.</p>
+<p>Pas de plans à suivre ici : le film part de ce que le client achète.</p>
+</div>
+<div class="kf">
+<div class="w"><b>1 h 30 <span class="ar">→</span> 1 min</b><span>pour présenter la solution, avant puis après le film</span></div>
+<div><b class="t">BFM Business</b><span>diffusion pendant le Grand Prix Focus Retail 2026</span></div>
+<div><b class="t">Data &amp; Valorisation</b><span>catégorie remportée par Argos au Grand Prix</span></div>
+</div>
+</div>
+<nav aria-label="Étapes du procédé Argos" class="track t4">
+<a href="#ar-1"><span class="d">01</span>Analyse</a><a href="#ar-2"><span class="d">02</span>Image réelle</a><a href="#ar-3"><span class="d">03</span>Vu par les capteurs</a><a href="#ar-4"><span class="d">04</span>Indicateurs</a>
+</nav>
+<div aria-hidden="true" class="band b4"><div>Ce que le client achète</div><div>Ce que l’œil voit</div><div>Ce que les capteurs mesurent</div><div>Ce que le client décide</div></div>
+<p class="glisse">Faites glisser →</p><div class="steps s4">
+<article class="step" id="ar-1">
+<div class="step-m ana"><div class="ana-in">
+<p class="x"><s>Un capteur laser</s><svg class="i"><use href="#i-arrow"></use></svg><span>Des indicateurs</span></p>
+<ul><li><svg class="i"><use href="#i-flow"></use></svg>Flux entrants</li><li><svg class="i"><use href="#i-clock"></use></svg>Attente en caisse</li><li><svg class="i"><use href="#i-eye"></use></svg>Exposition en rayon</li></ul>
+</div></div>
+<div class="step-b"><p class="step-n"><b>01</b>Analyse</p><h4>Ce que le client achète vraiment</h4><p class="tx">Les clients d’Argos n’achètent pas un capteur. Ils achètent des indicateurs. Le film part de là.</p><p class="fact"><span><b>3 indicateurs</b>, pas une fiche technique</span></p></div>
+</article>
+<article class="step" id="ar-2">
+<div class="step-m"><video aria-hidden="true" autoplay="" data-auto="" loop="" muted="" playsinline="" poster="assets/argos-magasins.webp" preload="metadata" src="assets/argos-magasins.mp4"></video></div>
+<div class="step-b"><p class="step-n"><b>02</b>Image réelle</p><h4>Le magasin, les clients en lumière</h4><p class="tx">Le magasin en image réelle. Les clients deviennent des silhouettes lumineuses : pas de visage, comme pour la mesure.</p><p class="fact"><span><b>Sans visage</b>, comme le capteur</span></p></div>
+</article>
+<article class="step" id="ar-3">
+<div class="step-m"><video aria-hidden="true" autoplay="" data-auto="" loop="" muted="" playsinline="" poster="assets/argos-filaire.webp" preload="metadata" src="assets/argos-filaire.mp4"></video></div>
+<div class="step-b"><p class="step-n"><b>03</b>Vu par les capteurs</p><h4>Le magasin vu par la mesure</h4><p class="tx">Le même magasin, redessiné tel que le voient les capteurs. On quitte ce que l’œil voit pour entrer dans ce qu’Argos mesure.</p><p class="fact"><span><b>De l’image</b> à la donnée</span></p></div>
+</article>
+<article class="step" id="ar-4">
+<div class="step-m"><img alt="Carte de chaleur des déplacements clients dans les allées d’un hypermarché" height="1400" loading="lazy" src="assets/fi-heatmap.webp" style="object-position:50% 60%" width="1128"/></div>
+<div class="step-b"><p class="step-n"><b>04</b>Indicateurs</p><h4>Les chiffres, animés dans le magasin</h4><p class="tx">Carte de chaleur, files d’attente : les indicateurs apparaissent là où ils naissent, dans le magasin.</p><p class="fact"><span><b>Carte de chaleur</b>, files d’attente</span></p></div>
+</article>
+</div>
+<div class="duo d3">
+<figure class="card film">
+<video controls="" playsinline="" poster="assets/argos-film.webp" preload="none" src="assets/argos-film.mp4"></video>
+<figcaption><span><b>Le film complet</b> · Argos Metrics</span><span>1 min 16 · avec son</span></figcaption>
+</figure>
+<div class="quote">
+<svg aria-hidden="true" class="qm" viewbox="0 0 38 30"><use href="#i-quote"></use></svg>
+<blockquote><p>Avant, il fallait une heure et demie pour présenter notre solution, et on n’était toujours pas compris. Maintenant, une minute.</p></blockquote>
+<p class="by"><b>Benoît</b>, Argos Metrics</p>
+<div class="bfm"><span class="bfm-l">BFM<br/>Business</span><p>Le film a été diffusé pendant le Grand Prix Focus Retail 2026, remporté par Argos dans la catégorie Data &amp; Valorisation.</p></div>
+</div>
+</div>
+
+<div class="swap"><button class="btn btn-l" data-goto="co" type="button">Voir le cas Cornouailles, procédé complet<svg class="i"><use href="#i-arrow"></use></svg></button></div>
+</div>
+</div></section>
+<!-- 5. Livrables -->
+
+<!-- 6. Méthode et jalons -->
+<section class="sec alt" id="methode"><div class="wrap">
+<div class="sh">
+<div><p class="eb"><span class="n">03</span>Méthode et jalons</p><h2>Rien ne part en production sans votre validation.</h2></div>
+<div><p class="obj"><span>Objection</span>« Qui valide, et à quel moment ? »</p><p class="lead">3 à 4 semaines du diagnostic à la livraison. Trois jalons, chacun validé par la bonne personne chez vous.</p></div>
+</div>
+<p class="glisse">Faites glisser →</p><ol class="ms">
+<li><p class="when">J0</p><h3>Diagnostic de 30 min</h3><p class="r"><b>Nous</b>Comprendre ce que vous vendez, à qui, et ce qui bloque aujourd’hui.</p><p class="r v"><b>Chez vous</b>Le porteur du projet.</p></li>
+<li><p class="when">Ensuite</p><h3>Atelier d’analyse</h3><p class="r"><b>Nous</b>Trouver ce que votre client achète vraiment, et ce que le film doit faire comprendre.</p><p class="r v"><b>Chez vous</b>Marketing et un expert technique.</p></li>
+<li class="j"><span class="jb"><svg class="i"><use href="#i-lock"></use></svg>Jalon 1</span><p class="when">Vers J+2</p><h3>Script et storyboard</h3><p class="r"><b>Nous livrons</b>Le script et le storyboard, plan par plan.</p><p class="r v"><b>Vous validez</b>Marketing pour le message, l’expert pour l’exactitude.</p></li>
+<li class="j"><span class="jb"><svg class="i"><use href="#i-lock"></use></svg>Jalon 2</span><p class="when">Vers J+10</p><h3>Les animations</h3><p class="r"><b>Nous livrons</b>Les animations, avant l’habillage réaliste. Chaque pièce bouge comme en vrai.</p><p class="r v"><b>Vous validez</b>Votre expert technique.</p></li>
+<li class="j"><span class="jb"><svg class="i"><use href="#i-lock"></use></svg>Jalon 3</span><p class="when">J+20 à J+28</p><h3>Film final</h3><p class="r"><b>Nous livrons</b>Le film, puis vos retours : 3 tours (A), ou illimités dans le cadre du storyboard validé (B).</p><p class="r v"><b>Vous validez</b>Le porteur du projet, et la direction si besoin.</p></li>
+</ol>
+<p class="ms-note"><svg class="i"><use href="#i-lock"></use></svg>L’habillage réaliste ne commence qu’une fois les animations validées. Vous ne découvrez pas le film à la fin.</p>
+</div></section>
+<!-- 7. Prix -->
+<section class="sec" id="prix"><div class="wrap">
+<div class="sh">
+<div><p class="eb"><span class="n">04</span>Prix</p><h2>Trois offres, prix affichés hors taxes.</h2></div>
+<div><p class="obj"><span>Objection</span>« Combien, et pour quoi exactement ? »</p><p class="lead">Un film pour expliquer, un kit pour vendre et diffuser, un grand format pour aller plus loin : un film long ou toute une série.</p></div>
+</div>
+<div class="plans">
+<article class="card plan">
+<div class="pk"><span class="lt">A</span><h3>Le Film</h3></div>
+<p class="for">Pour expliquer votre technologie.</p>
+<p class="price">6 000 €<small>HT</small></p>
+<p class="pn">Prix fixe, un film.</p>
+<ul>
+<li><svg class="i"><use href="#i-check"></use></svg>Diagnostic de 30 min, puis atelier d’analyse</li>
+<li><svg class="i"><use href="#i-check"></use></svg>Script et storyboard validés ensemble</li>
+<li><svg class="i"><use href="#i-check"></use></svg>Le bon mix de 3D, d’IA et de motion design, dosé pour votre sujet</li>
+<li><svg class="i"><use href="#i-check"></use></svg>Voix off et musique</li>
+<li><svg class="i"><use href="#i-check"></use></svg>1 langue, 1 format au choix (16:9 ou 9:16), en HD</li>
+<li><svg class="i"><use href="#i-check"></use></svg>3 tours de retours</li>
+</ul>
+<a class="btn btn-l" href="mailto:mad.tortel@gmail.com?subject=Diagnostic%20Filmer%20l%27impossible">Réserver un diagnostic de 30 min</a>
+</article>
+<article class="card plan rec">
+<span class="flag">Recommandé</span>
+<div class="pk"><span class="lt">B</span><h3>Le Kit commercial</h3></div>
+<p class="for">Pour vendre, exposer et publier.</p>
+<p class="price">8 900 €<small>HT</small></p>
+<p class="pn">Prix fixe, un film décliné.</p>
+<ul>
+<li class="plus">Tout Le Film, plus :</li>
+<li><svg class="i"><use href="#i-check"></use></svg>2 formats natifs : 16:9 et 9:16</li>
+<li><svg class="i"><use href="#i-check"></use></svg>2 langues</li><li><svg class="i"><use href="#i-check"></use></svg>Livré en 4K</li>
+<li><svg class="i"><use href="#i-check"></use></svg>Version diffusion : en boucle et sans son, pour vos écrans de salon, d’accueil ou de vitrine</li>
+<li><svg class="i"><use href="#i-check"></use></svg>3 formats courts pour LinkedIn</li>
+<li><svg class="i"><use href="#i-check"></use></svg>Retours illimités dans le cadre du storyboard validé</li>
+</ul>
+<a class="btn btn-o" href="mailto:mad.tortel@gmail.com?subject=Diagnostic%20Filmer%20l%27impossible">Réserver un diagnostic de 30 min</a>
+</article>
+<article class="card plan gc">
+<span class="flag k"><svg class="i"><use href="#i-shield"></use></svg>Grands comptes</span>
+<div class="pk"><span class="lt">C</span><h3>Le Grand format</h3></div>
+<p class="for">Au-delà du film explicatif : un film long, ou toute une série.</p>
+<p class="price"><span class="from">Sur devis, à partir de</span>15 000 €<small>HT</small></p>
+<p class="pn">Atelier de cadrage payé 1 500 € HT, déduit de la commande.</p>
+<ul><li class="plus">Tout Le Kit commercial, plus :</li><li><svg class="i"><use href="#i-check"></use></svg>Un film long, ou une série de films courts, par exemple un par produit</li><li><svg class="i"><use href="#i-check"></use></svg>Un univers visuel commun à tous vos films</li><li><svg class="i"><use href="#i-check"></use></svg>Atelier de cadrage avec vos équipes, puis devis</li><li><svg class="i"><use href="#i-check"></use></svg>Fichiers sources livrés</li><li><svg class="i"><use href="#i-check"></use></svg>Durée, nombre de films et langues : définis ensemble au devis</li></ul>
+<a class="btn btn-k" href="mailto:mad.tortel@gmail.com?subject=Diagnostic%20Filmer%20l%27impossible">Réserver un diagnostic de 30 min</a>
+</article>
+</div>
+<p class="terms"><span><b>Langues et formats supplémentaires :</b> sur devis.</span><span><b>Délai :</b> 3 à 4 semaines du diagnostic à la livraison.</span><span><b>Tous les prix</b> sont hors taxes.</span></p><div class="card uses">
+<p><b>Un film, six usages.</b>Le même film sert partout où votre technologie doit être comprise.</p>
+<ul>
+<li><svg class="i"><use href="#i-brief"></use></svg>Rendez-vous commerciaux</li>
+<li><svg class="i"><use href="#i-stand"></use></svg>Salons</li>
+<li><svg class="i"><use href="#i-phone"></use></svg>LinkedIn</li>
+<li><svg class="i"><use href="#i-chart"></use></svg>Investisseurs</li>
+<li><svg class="i"><use href="#i-mega"></use></svg>Conférences</li>
+<li><svg class="i"><use href="#i-learn"></use></svg>Formation</li>
+</ul>
+</div>
+<details class="ctd"><summary>Voir le détail des trois offres, ligne par ligne</summary><div class="ct">
+<div class="ct-h">
+<div><h3>Le détail, ligne par ligne</h3><p>Pour comparer les trois offres avant votre comité.</p></div>
+<div aria-label="Offre affichée dans le tableau" class="ct-sw chips" role="group">
+<button aria-pressed="false" class="chip" data-show="a" type="button">A · Le Film</button>
+<button aria-pressed="true" class="chip" data-show="b" type="button">B · Kit</button>
+<button aria-pressed="false" class="chip" data-show="c" type="button">C · Grand format</button>
+</div>
+</div>
+<div class="ctw" data-show="b">
+<table>
+<thead><tr>
+<th scope="col"><span class="pk2">Ligne</span><b>Ce qui est inclus</b></th>
+<th class="ca" scope="col"><span class="pk2">A</span><b>Le Film</b><span class="pr">6 000 € HT</span></th>
+<th class="cb" scope="col"><span class="pk2">B · Recommandé</span><b>Le Kit commercial</b><span class="pr">8 900 € HT</span></th>
+<th class="cc" scope="col"><span class="pk2">C · Grands comptes</span><b>Le Grand format</b><span class="pr">Dès 15 000 € HT</span></th>
+</tr></thead>
+<tbody>
+<tr class="g"><th colspan="4" scope="colgroup">Méthode</th></tr>
+<tr><th scope="row">Diagnostic de 30 min</th><td class="ca"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr><th scope="row">Atelier de départ</th><td class="ca">Atelier d’analyse</td><td class="cb">Atelier d’analyse</td><td class="cc">Atelier de cadrage payé 1 500 € HT, déduit de la commande</td></tr>
+<tr><th scope="row">Script et storyboard validés ensemble</th><td class="ca"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr><th scope="row">Jalons validés : storyboard, animations, film</th><td class="ca"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr><th scope="row">Interlocuteur unique</th><td class="ca"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr class="g"><th colspan="4" scope="colgroup">Production</th></tr>
+<tr><th scope="row">Le bon mix de 3D, d’IA et de motion design, dosé pour votre sujet</th><td class="ca"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr><th scope="row">Voix off et musique</th><td class="ca"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr><th scope="row">Nombre de films</th><td class="ca">1</td><td class="cb">1, décliné</td><td class="cc">Un film long ou une série</td></tr><tr><th scope="row">Univers visuel commun à plusieurs films</th><td class="ca"><span aria-label="Non inclus" class="no"></span></td><td class="cb"><span aria-label="Non inclus" class="no"></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr class="g"><th colspan="4" scope="colgroup">Livrables</th></tr>
+<tr><th scope="row">Formats</th><td class="ca">1 au choix : 16:9 ou 9:16</td><td class="cb">2 natifs : 16:9 et 9:16</td><td class="cc">2 natifs : 16:9 et 9:16</td></tr><tr><th scope="row">Définition</th><td class="ca">HD (1080p)</td><td class="cb">4K</td><td class="cc">4K</td></tr>
+<tr><th scope="row">Langues</th><td class="ca">1</td><td class="cb">2</td><td class="cc">Selon vos marchés, au devis</td></tr>
+<tr><th scope="row">Version diffusion, en boucle et sans son</th><td class="ca"><span aria-label="Non inclus" class="no"></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr><th scope="row">3 formats courts pour LinkedIn</th><td class="ca"><span aria-label="Non inclus" class="no"></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr><th scope="row">Fichiers sources</th><td class="ca"><span aria-label="Non inclus" class="no"></span></td><td class="cb"><span aria-label="Non inclus" class="no"></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr class="g"><th colspan="4" scope="colgroup">Retours et délais</th></tr>
+<tr><th scope="row">Retours</th><td class="ca">3 tours</td><td class="cb">Illimités, dans le cadre du storyboard validé</td><td class="cc">Illimités, dans le cadre du storyboard validé</td></tr>
+<tr><th scope="row">Délai</th><td class="ca">3 à 4 semaines</td><td class="cb">3 à 4 semaines</td><td class="cc">Planning au devis</td></tr>
+<tr class="g"><th colspan="4" scope="colgroup">Achats et conformité</th></tr>
+<tr><th scope="row">Accord de confidentialité</th><td class="ca"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr><th scope="row">Droits commerciaux cédés par écrit</th><td class="ca"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+<tr><th scope="row">Usage de l’IA déclaré (AI Act)</th><td class="ca"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cb"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td><td class="cc"><span aria-label="Inclus" class="y"><svg class="i"><use href="#i-check"></use></svg></span></td></tr>
+
+
+<tr class="g"><th colspan="4" scope="colgroup">Prix</th></tr>
+<tr class="tot"><th scope="row">Prix hors taxes</th><td class="ca">6 000 € HT</td><td class="cb">8 900 € HT</td><td class="cc">Sur devis<small>à partir de 15 000 € HT</small></td></tr>
+</tbody>
+</table>
+</div>
+</div></details>
+</div></section>
+<!-- 8. Service achats -->
+<section class="sec alt" id="achats"><div class="wrap">
+<div class="sh">
+<div><p class="eb"><span class="n">05</span>Pour votre service achats</p><h2>Ce que vos achats et votre juridique vont demander.</h2></div>
+<div><p class="obj"><span>Objection</span>« Nos achats vont-ils suivre ? »</p><p class="lead">Les points qui bloquent souvent un projet en comité, réglés avant le premier fichier.</p></div>
+</div>
+<div class="ach">
+<ul class="card chk">
+<li><span class="bx"><svg class="i"><use href="#i-check"></use></svg></span><div><b>Accord de confidentialité</b><span>Signé avant l’envoi de vos plans. Nous ne montrons que ce que vous choisissez de montrer.</span></div></li>
+<li><span class="bx"><svg class="i"><use href="#i-check"></use></svg></span><div><b>Droits commerciaux cédés par écrit</b><span>Pour vos rendez-vous, salons, LinkedIn, investisseurs, conférences et formations.</span></div></li>
+<li><span class="bx"><svg class="i"><use href="#i-check"></use></svg></span><div><b>Transparence sur l’IA <em>AI Act</em></b><span>Nous ne cachons jamais l’usage de l’IA. Nous vous indiquons ce qui est généré, pour vos obligations au titre du règlement européen sur l’IA.</span></div></li>
+<li><span class="bx"><svg class="i"><use href="#i-check"></use></svg></span><div><b>Devis détaillé et facture, prix HT</b><span>Chaque livrable est écrit dans le devis. Langues et formats supplémentaires : chiffrés sur devis, avant de commencer.</span></div></li>
+<li><span class="bx"><svg class="i"><use href="#i-check"></use></svg></span><div><b>Un interlocuteur unique</b><span>Du diagnostic à la livraison, une seule personne répond de votre projet.</span></div></li>
+<li><span class="bx"><svg class="i"><use href="#i-check"></use></svg></span><div><b>Des jalons de validation</b><span>Storyboard vers J+2, animations vers J+10, film final entre J+20 et J+28.</span></div></li>
+
+</ul>
+<aside class="who">
+<p class="eb"><span class="n">Comité</span>Qui mobiliser chez vous</p>
+<h3>Trois personnes suffisent.</h3>
+<p class="ds">Chacune intervient au bon jalon, pas à chaque étape.</p>
+<ul class="rl">
+<li><span class="ic"><svg class="i"><use href="#i-user"></use></svg></span><div><b>Le porteur du projet</b><span>Marketing ou communication. Diagnostic, storyboard, film final.</span></div></li>
+<li><span class="ic"><svg class="i"><use href="#i-gear"></use></svg></span><div><b>Un expert technique</b><span>R&amp;D ou ingénierie. Vérifie que tout est exact : le storyboard, puis les animations.</span></div></li>
+<li><span class="ic"><svg class="i"><use href="#i-receipt"></use></svg></span><div><b>Achats et juridique</b><span>Accord de confidentialité et cession des droits.</span></div></li>
+</ul>
+<p class="src"><b>Ce que vous nous transmettez :</b> plans, schémas, photos, une démo filmée : ce que vous avez. Sans plans, nous partons de l’existant.</p>
+</aside>
+</div>
+</div></section>
+<!-- 9. FAQ -->
+<section class="sec" id="faq"><div class="wrap">
+<div class="fq">
+<div class="fq-h">
+<p class="eb"><span class="n">06</span>Questions</p>
+<h2>Les objections, une par une.</h2>
+<p class="lead">Les questions que posent les directions marketing, R&amp;D et achats avant de signer.</p>
+<a class="btn btn-o" href="mailto:mad.tortel@gmail.com?subject=Diagnostic%20Filmer%20l%27impossible">Réserver un diagnostic de 30 min</a>
+</div>
+<div class="qa">
+<details><summary><span class="qn">01</span>Nos plans sont confidentiels. Comment les protégez-vous ?</summary><p class="ans">Un accord de confidentialité est signé avant tout échange. Le film ne montre que ce que vous choisissez de montrer : une pièce sensible peut rester simplifiée ou hors champ.</p></details>
+<details><summary><span class="qn">02</span>Nous n’avons pas de plans. Est-ce bloquant ?</summary><p class="ans">Non. Pour la pompe de Cornouailles, nous sommes partis des relevés, des archives et des plans d’époque. Pour Argos Metrics, il n’y avait aucun plan : nous sommes partis de ce que le client voulait montrer. Des photos, un schéma ou une démo filmée suffisent pour démarrer.</p></details>
+<details><summary><span class="qn">03</span>C’est de la vidéo IA ?</summary><p class="ans">En partie, et nous l’assumons. L’IA fait partie de notre mix, avec la 3D et le motion design. Nous dosons les trois à chaque plan, pour le meilleur résultat : c’est ce mélange qui rend le film à la fois exact, réaliste et clair. Nous vous indiquons toujours ce qui est généré par l’IA.</p></details>
+<details><summary><span class="qn">04</span>Qui doit valider, chez nous ?</summary><p class="ans">Trois jalons. Le storyboard : votre marketing pour le message, un expert pour l’exactitude. Les animations : votre expert technique. Le film final : le porteur du projet. Rien ne part en production sans validation.</p></details>
+<details><summary><span class="qn">05</span>Combien de temps faut-il ?</summary><p class="ans">3 à 4 semaines du diagnostic à la livraison : storyboard vers J+2, animations vers J+10, film final entre J+20 et J+28. Pour un salon, donnez-nous la date dès le diagnostic.</p></details>
+<details><summary><span class="qn">06</span>Et si le résultat ne nous convient pas ?</summary><p class="ans">Vous validez le storyboard puis les animations avant le rendu final : vous ne découvrez pas le film à la fin. Ensuite, 3 tours de retours avec Le Film, ou des retours illimités dans le cadre du storyboard validé avec Le Kit commercial et Le Grand format. Une demande qui sort du storyboard validé se discute et se chiffre à part.</p></details>
+<details><summary><span class="qn">07</span>Pourrons-nous l’utiliser comme nous voulons ?</summary><p class="ans">Les droits commerciaux sont cédés par écrit. Le même film sert en rendez-vous, sur un stand, sur LinkedIn, devant des investisseurs, en conférence ou en formation. Les langues et formats supplémentaires se font sur devis.</p></details>
+<details><summary><span class="qn">08</span>Et pour un projet plus large : plusieurs produits, ou un film long ?</summary><p class="ans">C’est l’offre C, Le Grand format : un film long, ou une série de films courts, par exemple un par produit, dans un même univers visuel. Elle commence par un atelier de cadrage avec vos équipes, payé 1 500 € HT et déduit de la commande : nous y fixons ensemble la durée, le nombre de films et les langues. Puis un devis à partir de 15 000 € HT. 4K, fichiers sources livrés.</p></details>
+</div>
+</div>
+</div></section>
+<!-- 10. CTA final -->
+<section class="final" id="contact"><div class="wrap">
+<div class="fin">
+<div><p class="eb"><span class="n">Diagnostic</span>30 minutes</p><h2>Qu’est-ce qui, chez vous, ne se filme pas ?</h2></div>
+<div><p class="lead">En 30 minutes, nous regardons ce que vous devez montrer, à qui, et quelle offre convient.</p>
+<div class="ctas"><a class="btn btn-o" href="mailto:mad.tortel@gmail.com?subject=Diagnostic%20Filmer%20l%27impossible">Réserver un diagnostic de 30 min</a><a class="btn btn-gl" href="https://madh-ia.com/etudes-de-cas.html">Voir les études de cas</a></div>
+</div>
+</div>
+<div class="recap">
+<div class="rc"><p class="pk3"><span>A · Le Film</span></p><b>6 000 €<small>HT</small></b><span>Un film, 1 langue, 1 format, 3 tours de retours.</span></div>
+<div class="rc rec"><p class="pk3"><span>B · Le Kit commercial</span><em>Recommandé</em></p><b>8 900 €<small>HT</small></b><span>2 formats, 2 langues, 4K, version diffusion, 3 formats LinkedIn.</span></div>
+<div class="rc"><p class="pk3"><span>C · Le Grand format</span><em class="k">Grands comptes</em></p><b>Sur devis</b><span>Film long ou série, 4K, un même univers visuel. À partir de 15 000 € HT, atelier de cadrage 1 500 € HT déduit.</span></div>
+</div>
+<footer class="ft">
+<span class="sig">Madh.IA · <b>M</b>edia · <b>A</b>rt · <b>D</b>igital · <b>H</b>ybrid</span>
+<span>Studio de création visuelle, Lille · <a href="https://madh-ia.com/">madh-ia.com</a></span>
+</footer>
+</div></section>
+</main>
+<script>
+(function(){
+var calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Logo animé (repris du site) */
+var T=[2600,1100,1100,1100];
+document.querySelectorAll('.lr').forEach(function(l){var w=l.querySelector('.lr-win'),c=l.querySelector('.lr-col'),it=c.children,n=it.length,i=0;
+function cale(){w.style.width=it[i].offsetWidth+'px'}function reserve(){l.style.minWidth='';var m=0;for(var k=0;k<n;k++)m=Math.max(m,it[k].offsetWidth);l.style.minWidth=(l.offsetWidth-w.offsetWidth+m)+'px'}reserve();cale();if(document.fonts)document.fonts.ready.then(function(){w.style.width='';reserve();cale()});if(calme)return;
+function pas(){i++;c.style.transform='translateY('+(-1.2*i)+'em)';cale();
+if(i===n-1)setTimeout(function(){c.style.transition='none';i=0;c.style.transform='translateY(0)';void c.offsetHeight;c.style.transition='';setTimeout(pas,T[0]-500)},500);
+else setTimeout(pas,T[i])}setTimeout(pas,T[0])});
+
+/* Vidéos : lecture selon la visibilité */
+function joue(v){var p=v.play();if(p&&p.catch)p.catch(function(){})}
+var vids=[].slice.call(document.querySelectorAll('video[data-auto]'));
+if(calme){vids.forEach(function(v){v.autoplay=false;v.removeAttribute('autoplay');v.pause();v.style.cursor='pointer';v.style.pointerEvents='auto';v.addEventListener('click',function(){v.paused?joue(v):v.pause()})})}
+else if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)joue(e.target);else e.target.pause()})},{threshold:.12});vids.forEach(function(v){io.observe(v)})}
+
+/* Comparateurs glissants */
+document.querySelectorAll('[data-cmp]').forEach(function(c){
+ var k=c.querySelector('.cmp-knob'),a=c.querySelector('.cmp-a'),b=c.querySelector('.cmp-b'),drag=false,p=parseFloat(c.style.getPropertyValue('--p'))||50;c._touched=false;
+ function set(v){p=Math.max(0,Math.min(100,v));c.style.setProperty('--p',p+'%');k.setAttribute('aria-valuenow',Math.round(p))}
+ function fromX(x){var r=c.getBoundingClientRect();set((x-r.left)/r.width*100)}
+ c.addEventListener('pointerdown',function(e){if(e.button>0)return;drag=true;c._touched=true;try{c.setPointerCapture(e.pointerId)}catch(x){}if(e.pointerType==='mouse')fromX(e.clientX);c.classList.add('drag')});
+ c.addEventListener('pointermove',function(e){if(drag)fromX(e.clientX)});
+ ['pointerup','pointercancel','lostpointercapture'].forEach(function(t){c.addEventListener(t,function(e){if(t==='pointerup'&&drag&&e.pointerType!=='mouse')fromX(e.clientX);drag=false;c.classList.remove('drag')})});
+ k.addEventListener('keydown',function(e){var s=e.shiftKey?10:4,m={ArrowLeft:-s,ArrowDown:-s,ArrowRight:s,ArrowUp:s};if(e.key in m){set(p+m[e.key])}else if(e.key==='Home')set(0);else if(e.key==='End')set(100);else return;e.preventDefault();c._touched=true});
+ c._set=set;
+ if(a&&b&&a.tagName==='VIDEO'&&b.tagName==='VIDEO'){
+  a.addEventListener('timeupdate',function(){if(a.seeking||b.seeking||b.readyState<2)return;if(Math.abs(a.currentTime-b.currentTime)>.12)b.currentTime=a.currentTime});
+  a.addEventListener('play',function(){if(b.paused&&!calme)joue(b)});
+  a.addEventListener('pause',function(){b.pause()});
+ }
+});
+
+/* Indice de glissement sur le comparateur du héros */
+var hc=document.getElementById('hero-cmp');
+if(hc&&!calme&&'IntersectionObserver' in window){var done=false,ho=new IntersectionObserver(function(es){if(done||!es[0].isIntersecting)return;done=true;ho.disconnect();setTimeout(function(){var t0=null;function f(t){if(hc._touched)return;if(!t0)t0=t;var x=(t-t0)/1700;if(x>=1){hc._set(50);return}hc._set(50-Math.sin(x*Math.PI*2)*16*(1-x*.4));requestAnimationFrame(f)}requestAnimationFrame(f)},900)},{threshold:.5});ho.observe(hc)}
+
+/* Choix du plan dans le héros */
+document.querySelectorAll('[data-pair]').forEach(function(btn){btn.addEventListener('click',function(){
+ var n=btn.getAttribute('data-pair'),a=hc.querySelector('.cmp-a'),b=hc.querySelector('.cmp-b');
+ a.poster='assets/pompe-'+n+'-3d.webp';a.src='assets/pompe-'+n+'-3d.mp4';
+ b.poster='assets/pompe-'+n+'-reel.webp';b.src='assets/pompe-'+n+'-reel.mp4';
+ if(!calme){joue(a);joue(b)}
+ document.querySelectorAll('[data-pair]').forEach(function(x){x.setAttribute('aria-pressed',x===btn)});
+})});
+
+/* Onglets des cas */
+var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+function sel(t,focus){tabs.forEach(function(x){var on=x===t,pn=document.getElementById(x.getAttribute('aria-controls'));x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;pn.hidden=!on;if(!on)pn.querySelectorAll('video').forEach(function(v){v.pause()})});if(focus)t.focus()}
+tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(t)});t.addEventListener('keydown',function(e){var j;if(e.key==='ArrowRight')j=(i+1)%tabs.length;else if(e.key==='ArrowLeft')j=(i-1+tabs.length)%tabs.length;else if(e.key==='Home')j=0;else if(e.key==='End')j=tabs.length-1;else return;e.preventDefault();sel(tabs[j],true)})});
+document.querySelectorAll('[data-goto]').forEach(function(b){b.addEventListener('click',function(){var t=document.getElementById(b.getAttribute('data-goto')==='argos'?'tab-argos':'tab-co');sel(t);document.querySelector('.tabs').scrollIntoView({behavior:calme?'auto':'smooth',block:'start'})})});
+var q=new URLSearchParams(location.search).get('onglet');
+if(q==='argos'||location.hash==='#argos')sel(document.getElementById('tab-argos'));
+if(location.hash==='#argos'||location.hash==='#cornouailles')document.getElementById('cas').scrollIntoView();
+
+/* Tableau comparatif : offre affichée sur téléphone */
+var ctw=document.querySelector('.ctw');
+document.querySelectorAll('[data-show]').forEach(function(b){if(b===ctw)return;b.addEventListener('click',function(){ctw.setAttribute('data-show',b.getAttribute('data-show'));document.querySelectorAll('.ct-sw [data-show]').forEach(function(x){x.setAttribute('aria-pressed',x===b)})})});
+
+/* En-tête : filet au défilement et section active */
+var hd=document.getElementById('hd');
+function onScroll(){hd.classList.toggle('on',window.scrollY>8)}onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+var links=[].slice.call(document.querySelectorAll('.nav a'));
+if('IntersectionObserver' in window){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(a){a.classList.toggle('act',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});
+links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)so.observe(s)});
+var fo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.remove('act')})})},{rootMargin:'-45% 0px -50% 0px'});['haut','contact'].forEach(function(id){var s=document.getElementById(id);if(s)fo.observe(s)})}
+})();
+</script>
+</body>
+</html>
