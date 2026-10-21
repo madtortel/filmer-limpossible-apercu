@@ -110,72 +110,90 @@ blockquote+p{margin-top:12px;font:500 11px/1.4 var(--mono);color:var(--mute);let
  .out{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:480px){.wrap{padding:0 18px}.hero{padding:40px 0 36px}.lead{font-size:16.5px}section.s{padding:44px 0}.mix div{grid-template-columns:minmax(0,1fr);gap:2px}.demo{padding:16px;margin-left:-6px;margin-right:-6px}.out b{font-size:18px}}
+
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.b2{display:inline-flex;align-items:center;padding:15px 20px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15px}
+.b2.o{background:var(--acc);color:var(--ink)}.b2.l{border:1.5px solid var(--ink);color:var(--ink)}
+.need{list-style:none;padding:0;margin-top:24px;display:grid;gap:0}
+.need li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:16px 0;border-top:1px solid var(--line2);font-size:17px;line-height:1.45}
+.need li b{font:500 12px/1.9 var(--mono);color:var(--acc)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.quote{margin-top:26px;padding:22px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.quote blockquote{font-size:18px}
+.quote p{margin-top:12px;font:500 11px/1.4 var(--mono);color:var(--mute);letter-spacing:.04em}
+.tech{background:var(--ink);color:var(--bg);padding:46px 0 30px}
+.tech .eb{color:var(--acc)}
+.tech h2{color:var(--bg)}
+.tech .lead{color:#d9d3c6}
+.ideas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px}
+.ideas div{border:1px solid rgba(245,242,234,.16);border-radius:16px;padding:18px}
+.ideas b{display:block;font:500 11px/1 var(--mono);color:var(--acc);margin-bottom:10px}
+.ideas h3{color:var(--bg);font-size:17px}
+.ideas p{color:#bdb6a8;font-size:14.5px;margin-top:6px}
+.tools3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.tools3 p{font-size:14.5px;color:#d9d3c6}.tools3 b{color:var(--bg)}
+.tech .mixbar{margin-top:30px;background:rgba(245,242,234,.1)}
+.steps4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}
+.steps4 div{font-size:14.5px;color:#d9d3c6;border-top:2px solid rgba(245,242,234,.18);padding-top:12px}
+.steps4 b{display:block;color:var(--bg);margin-bottom:4px}
+.tech .demo{background:#0e0d0a;border:1px solid rgba(245,242,234,.12)}
+.sub{margin-top:44px;font-size:22px;letter-spacing:-.03em;font-weight:800;color:var(--bg);scroll-margin-top:70px}
+@media (max-width:820px){.ideas,.tools3,.steps4{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
-<header class="hd"><div class="wrap"><span class="logo">Madh<i>.</i>IA</span><p>Pour GrindoSonic<br/>Rdv Carnot · 21 octobre 2026</p></div></header>
+<header class="hd"><div class="wrap"><span class="logo">Madh<i>.</i>IA</span><p>Pour GrindoSonic<br>Rdv Carnot · 21 octobre 2026</p></div></header>
+
 <section class="hero"><div class="wrap">
-<p class="eb">Filmer l’impossible · proposition de film</p>
-<h1>Ce qui se passe dans la pièce en moins d’une seconde, personne ne l’a jamais vu.</h1>
-<p class="lead">GrindoSonic mesure ce qu’on ne voit pas : une frappe, une vibration, et la qualité d’un matériau apparaît. Nous proposons de filmer ce moment de l’intérieur, pour que n’importe qui comprenne votre technologie en une minute.</p>
-<div class="who"><span class="pill o">Un film d’environ 75 s</span><span class="pill">Une maquette interactive en option</span><span class="pill">Prêt pour vos prochains salons</span></div>
+<p class="eb">Filmer l’impossible · pour GrindoSonic</p>
+<h1>Ce que votre instrument mesure en une seconde, personne ne l’a jamais vu.</h1>
+<p class="lead">Nous proposons un film d’une minute qui le montre de l’intérieur. Pour que n’importe qui comprenne votre technologie, sur un stand comme en rendez-vous.</p>
+<div class="ctas"><a class="b2 o" href="#demo">Essayer la maquette</a><a class="b2 l" href="mailto:mad.tortel@gmail.com?subject=GrindoSonic%20%C2%B7%20Filmer%20l%27impossible">Organiser un atelier</a></div>
 </div></section>
+
 <section class="s alt"><div class="wrap">
-<p class="eb">01 · Le constat</p>
-<h2>Votre technologie est invisible. C’est sa force, et c’est ce qui la rend difficile à vendre.</h2>
-<div class="grid3">
-<div class="card"><span class="n">01</span><h3>On ne voit rien</h3><p>Une frappe, un petit bruit, un chiffre à l’écran. Le client ne voit ni la vibration, ni le défaut, ni pourquoi le résultat est fiable.</p></div>
-<div class="card"><span class="n">02</span><h3>Le meilleur argument est économique</h3><p>« Une pièce défectueuse coûte plus cher que de toutes les tester. » C’est vrai, mais cela se démontre mal sur un stand.</p></div>
-<div class="card"><span class="n">03</span><h3>Deux publics à convaincre</h3><p>La R&amp;D, qui veut comprendre la mesure, et la production, qui veut écarter les mauvaises pièces avant l’expédition. Le film parle aux deux.</p></div>
-</div>
+<p class="eb">01 · Votre besoin</p>
+<h2>Une technologie qui ne se voit pas, à faire comprendre vite.</h2>
+<ul class="need">
+<li><b>01</b><span>Ce qui se passe est invisible : une frappe, un son, un chiffre.</span></li>
+<li><b>02</b><span>Vos clients doivent comprendre en quelques secondes, sur un salon, en rendez-vous, dans 50 pays.</span></li>
+<li><b>03</b><span>Votre meilleur argument, « une pièce défectueuse coûte plus cher que de toutes les tester », mérite d’être montré, pas expliqué.</span></li>
+</ul>
 </div></section>
+
 <section class="s"><div class="wrap">
-<p class="eb">02 · L’idée</p>
-<div class="idea">
-<div><p class="big">On entre dans la matière. On voit l’onde la traverser, la pièce <em>chanter</em>, et une fissure invisible <em>fausser la note</em>.</p>
-<p class="lead">Le film suit une seule frappe, de l’extérieur à l’intérieur, puis du laboratoire à la ligne de production.</p></div>
-<div class="mix">
-<p class="eb" style="margin:0">Notre mix, dosé plan par plan</p>
-<div aria-hidden="true" class="mixbar"><i></i></div>
-<div><b>3D</b><span>Les vraies formes de vibration de la pièce, en flexion et en torsion. Exactes, parce qu’elles sont calculées, pas inventées.</span></div>
-<div><b>IA vidéo</b><span>Le laboratoire, la fonderie, la ligne de production, rendus comme s’ils avaient été filmés.</span></div>
-<div><b>Motion design</b><span>La note devient une courbe, la courbe devient vos chiffres : rigidité, élasticité, amortissement.</span></div>
-</div>
-</div>
+<p class="eb">02 · Notre réponse</p>
+<h2>Un film d’une minute qui entre dans la matière.</h2>
+<p class="lead">On voit la pièce vibrer de l’intérieur, un défaut invisible changer sa note, puis le résultat tomber. Du laboratoire à la ligne de production.</p>
+<div class="pills"><span class="pill o">Film d’environ 1 min</span><span class="pill">Français et anglais</span><span class="pill">Écran large et vertical</span><span class="pill">Version pour votre stand</span><span class="pill">3 extraits LinkedIn</span></div>
+<div class="quote"><blockquote>« Avant, il fallait une heure et demie pour présenter notre solution, et on n’était toujours pas compris. Maintenant, une minute. »</blockquote><p>Benoît · Argos Metrics · film diffusé sur BFM Business</p></div>
 </div></section>
+
 <section class="s alt"><div class="wrap">
-<p class="eb">03 · Le script, première version</p>
-<h2>Environ 75 secondes, en 7 plans.</h2>
-<p class="lead">Une base pour en discuter : nous l’ajustons avec votre R&amp;D et votre marketing avant de produire quoi que ce soit.</p>
-<div class="sc">
-<article class="scene"><div class="tc"><b>01</b>0:00 · 0:06<div class="tools"><span class="t tia">IA vidéo</span></div></div>
-<div class="img"><p class="lab">À l’image</p><p>Gros plan. Une pièce posée sur deux appuis. Un petit percuteur la frappe. Le son est net et cristallin.</p></div>
-<div class="vo"><p class="lab">Voix off</p><p>Une frappe. Moins d’une seconde.</p></div></article>
-<article class="scene"><div class="tc"><b>02</b>0:06 · 0:16<div class="tools"><span class="t t3d">3D</span></div></div>
-<div class="img"><p class="lab">À l’image</p><p>On plonge dans la pièce, qui devient translucide. L’onde la traverse, puis la pièce se met à vibrer en flexion, puis en torsion, au ralenti.</p></div>
-<div class="vo"><p class="lab">Voix off</p><p>À l’intérieur, la matière se met à vibrer. Chaque matériau a sa propre note.</p></div></article>
-<article class="scene"><div class="tc"><b>03</b>0:16 · 0:26<div class="tools"><span class="t tmo">Motion</span><span class="t t3d">3D</span></div></div>
-<div class="img"><p class="lab">À l’image</p><p>La vibration devient une courbe, puis un spectre. Les pics se figent en valeurs : module d’Young, module de cisaillement, coefficient de Poisson, amortissement.</p></div>
-<div class="vo"><p class="lab">Voix off</p><p>GrindoSonic écoute cette note, et en tire ce qui fait la qualité d’un matériau.</p></div></article>
-<article class="scene"><div class="tc"><b>04</b>0:26 · 0:38<div class="tools"><span class="t t3d">3D</span><span class="t tia">IA vidéo</span></div></div>
-<div class="img"><p class="lab">À l’image</p><p>Deux pièces identiques. On frappe la seconde : en transparence, une fissure interne apparaît. Sa note est légèrement fausse, le pic se décale, un voyant passe au rouge.</p></div>
-<div class="vo"><p class="lab">Voix off</p><p>Une fissure, une porosité, invisibles à l’œil : la note change. La pièce est écartée, sans être détruite.</p></div></article>
-<article class="scene"><div class="tc"><b>05</b>0:38 · 0:52<div class="tools"><span class="t tia">IA vidéo</span></div></div>
-<div class="img"><p class="lab">À l’image</p><p>Montage rythmé : un laboratoire de R&amp;D et un four où la pièce est mesurée en température, une fonderie, des réfractaires, une pièce imprimée en 3D, une meule.</p></div>
-<div class="vo"><p class="lab">Voix off</p><p>Du laboratoire à la ligne de production : céramiques, métaux, composites, pièces imprimées en 3D.</p></div></article>
-<article class="scene"><div class="tc"><b>06</b>0:52 · 1:04<div class="tools"><span class="t tia">IA vidéo</span><span class="t tmo">Motion</span></div></div>
-<div class="img"><p class="lab">À l’image</p><p>Une ligne de production. Chaque pièce est testée en moins de 3 secondes. Une pièce défectueuse est écartée avant l’expédition. À l’écran, le coût d’un test face au coût d’un défaut.</p></div>
-<div class="vo"><p class="lab">Voix off</p><p>Tester toutes les pièces coûte moins cher que d’en laisser passer une seule.</p></div></article>
-<article class="scene"><div class="tc"><b>07</b>1:04 · 1:15<div class="tools"><span class="t tmo">Motion</span></div></div>
-<div class="img"><p class="lab">À l’image</p><p>Retour au gros plan du début, la même frappe. Puis le logo, avec vos repères : plus de 1 700 systèmes, plus de 50 pays, plus de 60 ans, conforme ASTM E1876.</p></div>
-<div class="vo"><p class="lab">Voix off</p><p>GrindoSonic. Entendez ce que vos matériaux ne montrent pas.</p></div></article>
-</div>
-<div class="tag"><p class="lab">Phrase de fin proposée</p><p class="big">Entendez ce que vos matériaux ne montrent pas.</p><p class="alt2">Autres pistes : « La matière a une voix. » · « Une frappe suffit. »</p></div>
+<p class="eb">03 · La suite</p>
+<h2>Un atelier de 45 minutes avec votre R&amp;D et votre marketing.</h2>
+<p class="lead">Nous revenons avec le script et un chiffrage. Si vous visez vos salons de novembre, Matériaux et Formnext, c’est le moment de démarrer.</p>
+<div class="ctas"><a class="b2 o" href="mailto:mad.tortel@gmail.com?subject=GrindoSonic%20%C2%B7%20Filmer%20l%27impossible">Organiser l’atelier</a></div>
 </div></section>
-<section class="s" id="demo"><div class="wrap">
-<p class="eb">04 · En option, la maquette interactive</p>
-<h2>« Frappez la pièce » : votre technologie, à essayer du doigt.</h2>
-<p class="lead">Un module pour votre site ou pour une tablette sur votre stand. Le visiteur choisit un matériau, frappe la pièce, entend sa note et voit ce que l’instrument mesure. Essayez cette première maquette.</p>
+
+<section class="tech"><div class="wrap">
+<p class="eb">Note technique · pour aller plus loin</p>
+<h2>Ce que le film veut montrer.</h2>
+<p class="lead">Quatre idées, à affiner ensemble pendant l’atelier.</p>
+<div class="ideas">
+<div><b>01</b><h3>La frappe</h3><p>Un geste minuscule, filmé de très près. Tout part de là.</p></div>
+<div><b>02</b><h3>La matière qui vibre</h3><p>La pièce devient transparente et vibre au ralenti. Chaque matériau a sa note.</p></div>
+<div><b>03</b><h3>Le défaut caché</h3><p>Deux pièces identiques. L’une cache une fissure : sa note change, elle est écartée sans être détruite.</p></div>
+<div><b>04</b><h3>Du labo à l’usine</h3><p>Recherche, essais en température, ligne de production : la même mesure, partout.</p></div>
+</div>
+<div class="mixbar" aria-hidden="true"><i></i></div>
+<div class="tools3">
+<p><b>La 3D</b> pour les vraies formes de vibration de la pièce, exactes.</p>
+<p><b>L’IA vidéo</b> pour le laboratoire et l’usine, comme s’ils avaient été filmés.</p>
+<p><b>Le motion design</b> pour transformer la note en chiffres lisibles.</p>
+</div>
+<p class="sub" id="demo">En option : la maquette « Frappez la pièce »</p>
+<p class="lead">Pour votre site ou une tablette de stand. Choisissez un matériau, frappez, écoutez.</p>
 <div class="demo">
 <div class="dtop">
 <div aria-label="Matériau" class="chips" role="group">
@@ -186,8 +204,8 @@ blockquote+p{margin-top:12px;font:500 11px/1.4 var(--mono);color:var(--mute);let
 <label class="sw"><input id="fis" type="checkbox"/> Avec une fissure cachée</label>
 </div>
 <div class="stage">
-<svg aria-label="Barreau posé sur deux appuis, frappé en son centre" id="sv" role="img" viewbox="0 0 600 252">
-<defs><lineargradient id="gb" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#cfc9bd"></stop><stop offset="1" stop-color="#8f897d"></stop></lineargradient></defs>
+<svg aria-label="Barreau posé sur deux appuis, frappé en son centre" id="sv" role="img" viewBox="0 0 600 252">
+<defs><linearGradient id="gb" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#cfc9bd"></stop><stop offset="1" stop-color="#8f897d"></stop></linearGradient></defs>
 <text fill="#9a9487" font-family="Martian Mono, monospace" font-size="11" x="20" y="28">BARREAU 100 × 10 × 5 MM</text>
 <path fill="url(#gb)" id="bar" stroke="#e9e3d6" stroke-width="1"></path>
 <path d="" fill="none" id="crack" opacity="0" stroke="#ff5a46" stroke-linejoin="round" stroke-width="2.4"></path>
@@ -211,38 +229,16 @@ blockquote+p{margin-top:12px;font:500 11px/1.4 var(--mono);color:var(--mute);let
 <p class="verdict" id="vd">Choisissez un matériau, puis frappez la pièce.</p>
 <p class="note">Maquette de principe, avec des valeurs typiques de manuel pour un barreau de 100 × 10 × 5 mm. La version finale utiliserait vos données et votre charte.</p>
 </div>
-</div></section>
-<section class="s alt"><div class="wrap">
-<p class="eb">05 · Ce que vous recevez</p>
-<h2>Un film, et tout ce qu’il faut pour qu’il serve partout.</h2>
-<div class="liv">
-<div class="card"><h3>Le film <small>Environ 75 s</small></h3><p>En 16:9 pour le site et les présentations, en 9:16 pour LinkedIn et les écrans verticaux. En français et en anglais pour vos 50 pays.</p></div>
-<div class="card"><h3>La version stand <small>En boucle, sans son</small></h3><p>Lisible sans voix off, pensée pour l’écran d’un salon. Les sous-titres et les chiffres portent le message.</p></div>
-<div class="card"><h3>Des formats courts <small>LinkedIn</small></h3><p>Trois extraits de 10 à 15 secondes : la frappe, la fissure, la ligne de production.</p></div>
-<div class="card"><h3>La maquette interactive <small>Option</small></h3><p>« Frappez la pièce », sur votre site et sur une tablette de stand, avec vos matériaux et vos données.</p></div>
+<p class="sub">Comment on travaille</p>
+<div class="steps4">
+<div><b>1 · Atelier</b>Le message et ce qu’on montre.</div>
+<div><b>2 · Storyboard</b>Validé par votre marketing.</div>
+<div><b>3 · Animations</b>Validées par votre expert technique.</div>
+<div><b>4 · Film final</b>3 à 4 semaines après l’atelier.</div>
 </div>
-<div class="cal">
-<div><b>Étape 1</b><p>Un atelier avec votre R&amp;D et votre marketing pour valider le script.</p></div>
-<div><b>Étape 2</b><p>Le storyboard, puis les animations 3D, validées par votre expert.</p></div>
-<div><b>Étape 3</b><p>Le rendu réaliste, le montage, la voix off et la musique.</p></div>
-<div><b>Livraison</b><p>3 à 4 semaines après l’atelier.</p></div>
-</div>
+<p class="foot">Madh.IA · studio de création visuelle · Lille · madh-ia.com<br>Les chiffres sur GrindoSonic viennent de grindosonic.com.</p>
 </div></section>
-<section class="s"><div class="wrap">
-<p class="eb">06 · Ce que nous avons déjà fait</p>
-<h2>Une technologie sans image, comprise en une minute.</h2>
-<div class="refs">
-<div class="card"><blockquote>« Avant, il fallait une heure et demie pour présenter notre solution, et on n’était toujours pas compris. Maintenant, une minute. »</blockquote><p>Benoît · Argos Metrics, mesure du comportement client en magasin, sans caméra</p></div>
-<div class="card"><h3>Diffusé sur BFM Business</h3><p>Le film Argos Metrics est passé pendant le Grand Prix Focus Retail 2026, remporté par Argos dans la catégorie Data &amp; Valorisation.</p><p style="margin-top:12px">Ils ont aussi travaillé avec nous : Decathlon, France Télévisions, BNP Paribas, Nespresso, E.Leclerc.</p></div>
-</div>
-</div></section>
-<section class="cta"><div class="wrap">
-<p class="eb">La suite</p>
-<h2>Un atelier de 45 minutes avec vos équipes, et nous revenons avec le script final et une proposition chiffrée.</h2>
-<p class="lead">Si vous visez Matériaux à Grenoble ou Formnext à Francfort, du 16 au 20 novembre, c’est le moment de démarrer.</p>
-<a class="btn" href="mailto:mad.tortel@gmail.com?subject=GrindoSonic%20%C2%B7%20Filmer%20l%27impossible">Organiser l’atelier</a>
-<p class="foot">Madh.IA · studio de création visuelle · Lille · madh-ia.com<br/>Proposition préparée pour GrindoSonic, 21 octobre 2026. Les chiffres cités sur GrindoSonic viennent de grindosonic.com.</p>
-</div></section>
+
 <script>
 (function(){
   var M = {
